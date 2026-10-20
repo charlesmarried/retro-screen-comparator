@@ -1,8 +1,9 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Retro Screen Comparator</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%230b0d13'/%3E%3Crect%20x='9'%20y='15'%20width='46'%20height='34'%20rx='5'%20fill='none'%20stroke='%23ff5722'%20stroke-width='4'/%3E%3Crect%20x='17'%20y='22'%20width='30'%20height='20'%20rx='2'%20fill='%23ff5722'/%3E%3Cpath%20d='M9%2055h14M41%2055h14'%20stroke='%2394a3b8'%20stroke-width='3'%20stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%230e0e0e'/%3E%3Crect%20x='9'%20y='15'%20width='46'%20height='34'%20rx='5'%20fill='none'%20stroke='%23ff5722'%20stroke-width='4'/%3E%3Crect%20x='17'%20y='22'%20width='30'%20height='20'%20rx='2'%20fill='%23ff5722'/%3E%3Cpath%20d='M9%2055h14M41%2055h14'%20stroke='%2394a3b8'%20stroke-width='3'%20stroke-linecap='round'/%3E%3C/svg%3E">
 <meta name="description" content="Compare retro console and handheld screens and chassis at true physical size: aspect ratios, black bars and integer scaling.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Retro Screen Comparator">
@@ -10,7 +11,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Retro Screen Comparator">
 <meta name="twitter:description" content="Compare retro console and handheld screens at real physical size.">
-<meta name="theme-color" content="#0f131d">
+<meta name="theme-color" content="#2a2a2a">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
 <style>
@@ -18,8 +19,8 @@
 *::-webkit-scrollbar{width:10px;height:10px}*::-webkit-scrollbar-track{background:transparent}
 *::-webkit-scrollbar-thumb{background:var(--grid2);border-radius:10px;border:2px solid var(--panel2,var(--bg));background-clip:padding-box}
 *::-webkit-scrollbar-thumb:hover{background:var(--ac)}*::-webkit-scrollbar-corner{background:transparent}
-:root{--page:#0f131d;--bg:#0b0d13;--panel:#161c2a;--panel2:#0b0d13;--line:#2a3350;--tx:#f1f5f9;--mu:#94a3b8;--ac:#ff5722;--acx:#0b0d13;--hov:#1c2233;--stage:#0d111a;--grid:#1a2030;--grid2:#232b3f;--r:12px;
---ui:'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;--mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--hd:var(--ui);--smu:#94a3b8;--stx:#f1f5f9;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--page:#323232;--bg:#0e0e0e;--panel:#191919;--panel2:#111111;--line:#3d3d3d;--tx:#ebebeb;--mu:#a0a0a0;--ac:#f2f2f2;--acx:#0e0e0e;--hov:#232323;--stage:#1f1f1f;--grid:#272727;--grid2:#343434;--r:12px;
+--ui:'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;--mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--hd:var(--ui);--smu:#a0a0a0;--stx:#ebebeb;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--page,var(--bg));color:var(--tx);font:15px/1.45 var(--ui)}
 header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}
@@ -29,7 +30,7 @@ header p{margin:4px 0 0;color:var(--mu);font-size:14px}
 header{flex-wrap:wrap}
 #mode{display:none;margin-left:6px;font:500 12px var(--mono);color:var(--ac);border:1px solid var(--line);border-radius:999px;padding:2px 8px}
 .ic{width:16px;height:16px;fill:currentColor;flex:none}
-.wrap{display:grid;grid-template-columns:330px minmax(0,1fr);gap:16px;padding:16px;max-width:1500px;margin:auto}
+.wrap{display:grid;grid-template-columns:352px minmax(0,1fr);gap:14px;padding:12px;max-width:none;margin:0}
 body[data-theme=light] .card{box-shadow:0 1px 2px #1b2a4a14,0 4px 14px #1b2a4a12}.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
 h2{margin:0 0 12px;font:600 13px var(--hd);letter-spacing:.16em;text-transform:uppercase;color:var(--mu);display:flex;align-items:center;gap:8px}
 label{display:block;font-size:13px;color:var(--mu);margin:10px 0 4px;font-weight:500}
@@ -49,13 +50,16 @@ button.sec{background:transparent;color:var(--tx);border:1px solid var(--line)}
 .tg{display:flex;align-items:center;margin:0 10px 0 6px;white-space:nowrap;color:var(--mu);font-size:13px}
 .opt{display:flex;align-items:center;gap:10px;margin:0 0 10px}.opt label{margin:0;white-space:nowrap}.opt select{flex:1}
 .hint{font-size:13px;color:var(--mu);margin-top:6px}
-.kofi{display:flex;align-items:center;justify-content:center;gap:7px;margin:2px 0 14px;padding:8px 10px;border:1px dashed var(--line);border-radius:var(--r);color:var(--mu);font-size:13px;text-decoration:none;opacity:.8;transition:opacity .15s,color .15s,border-color .15s}.kofi svg{color:var(--ac)}.kofi:hover,.kofi:focus-visible{opacity:1;color:var(--tx);border-color:var(--ac)}@media(max-width:900px){.kofi{order:9;margin:0 0 10px}}
+.kofi{display:flex;align-items:center;justify-content:center;gap:7px;margin:2px 0 14px;padding:8px 10px;border:1px dashed var(--line);border-radius:var(--r);color:var(--mu);font-size:13px;text-decoration:none;opacity:.8;transition:opacity .15s,color .15s,border-color .15s}.kofi svg{color:var(--ac)}
+.cred{margin:-8px 0 14px;text-align:center;font-size:12.5px;letter-spacing:.02em;color:var(--mu);opacity:.85}
+@media(max-width:900px){.cred{order:9;margin:-4px 0 10px}}
+.kofi:hover,.kofi:focus-visible{opacity:1;color:var(--tx);border-color:var(--ac)}@media(max-width:900px){.kofi{order:9;margin:0 0 10px}}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
 .chip{display:flex;align-items:center;gap:8px;background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:4px 6px 4px 10px;font-size:13px}
 .chip span{cursor:pointer}.chip span:hover{text-decoration:underline}
 .chip b{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;color:var(--mu);font-size:12px;cursor:pointer}.chip b:hover{background:var(--hov);color:var(--tx)}
 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;flex:none}.chip .dot{margin:0}
-#stage{position:relative;min-height:300px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:24px;padding:42px 14px 14px;overflow:auto;border:1px solid var(--line);border-radius:10px;background-color:var(--stage);background-image:linear-gradient(var(--grid2) 1px,transparent 1px),linear-gradient(90deg,var(--grid2) 1px,transparent 1px),linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:50px 50px,50px 50px,10px 10px,10px 10px}
+#stage{position:relative;min-height:clamp(340px,52vh,640px);display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:24px;padding:46px 60px 46px 30px;overflow:auto;border:1px solid var(--line);border-radius:10px;background-color:var(--stage);background-image:linear-gradient(var(--grid2) 1px,transparent 1px),linear-gradient(90deg,var(--grid2) 1px,transparent 1px),linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:50px 50px,50px 50px,10px 10px,10px 10px}
 .ruler{position:absolute;left:12px;top:10px;display:flex;align-items:center;gap:8px;font:500 12px var(--mono);color:var(--smu)}
 .ruler path{stroke:var(--smu);stroke-width:1.5;fill:none}
 .scr{position:relative;flex:none;display:flex;align-items:center;justify-content:center;background:#000;border-radius:3px;overflow:hidden;outline:1px solid color-mix(in srgb,var(--c) 55%,transparent);outline-offset:-1px;box-shadow:inset 0 0 12px #000c}
@@ -64,7 +68,7 @@ button.sec{background:transparent;color:var(--tx);border:1px solid var(--line)}
 .body{position:relative;flex:none;margin:0 46px 44px}.body .scr{position:absolute}
 .gd{position:absolute;pointer-events:none;background:var(--ac);opacity:.85;z-index:50}#stage:focus{outline:none}
 .vg4{grid-template-columns:repeat(4,1fr)}.dsub{margin:10px 0 2px;padding:8px 10px 4px;border:1px solid color-mix(in srgb,var(--ac) 40%,var(--line));border-radius:10px;background:color-mix(in srgb,var(--ac) 8%,var(--panel))}.dsub .dtag{font:700 10.5px var(--hd);letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin:0 0 4px}.dsub .subt{margin:8px 0 4px}.dsub .vb{margin:2px 0 6px}
-.rst{font:600 13px var(--ui);color:var(--tx);margin:0 0 8px}.k-real .pd{font:400 12px var(--mono);color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:2px 0 10px 22px}.calref{margin:0;font-size:13px}
+.rst{font:600 15px var(--ui);color:var(--tx);margin:0 0 8px}.k-real label{font-size:15px}.k-real .pd{font:400 14px var(--mono);color:var(--mu);white-space:normal;margin:2px 0 10px 22px}.calref{margin:0;font-size:13px}
 .tbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 12px}.tbar .seg{margin:0;padding:3px}.tbar .seg button{padding:6px 14px;font-size:13px}.tsep{width:1px;height:20px;background:var(--line)}.tsp{flex:1}
 .tbar #bStack{width:auto;min-height:0;margin:0;padding:6px 12px;font:500 13px var(--ui);background:transparent;color:var(--tx);border:1px solid var(--line);border-radius:999px;box-shadow:none}.tbar #bStack:hover:not(:disabled){border-color:var(--ac)}.tbar #bStack:disabled{opacity:.4}
 .tbar .tg{margin:0;font-size:13px}.tbar .opt{margin:0;gap:8px}.tbar .opt label{font-size:13px;color:var(--mu)}.tbar .opt .vb.vs{display:flex;flex-wrap:nowrap;gap:2px;padding:3px;border:1px solid var(--line);border-radius:999px;background:var(--bg)}.tbar .opt .vs .vt{flex:none;padding:4px 10px;border:0;background:transparent;font-size:11.5px}.tbar .opt .vs .vt.on{background:var(--ac);color:var(--acx)}
@@ -80,13 +84,12 @@ button.sec{background:transparent;color:var(--tx);border:1px solid var(--line)}
 .vs .vt{flex:1 1 auto;flex-direction:row;justify-content:center;padding:7px 10px;border-radius:999px}.opt .vb{flex:1;margin:0}
 .vsc{grid-template-columns:repeat(3,1fr)}.vsc .vt .vi{max-width:64px}
 .gtb{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 10px}.gtb .seg{margin:0 0 0 auto}.gtb .seg button{padding:6px 12px;white-space:nowrap}
-.gg{display:grid;gap:12px}.gcd{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:8px;cursor:pointer;min-width:0}.gcd:hover{border-color:var(--ac)}.gcd.best{border-color:var(--bestc)}
-.gh{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.gh b{font:700 24px var(--mono)}.gh span{font-size:16px;font-weight:600;color:var(--tx);opacity:.85}.gh i{margin-left:auto;font-style:normal;color:var(--bestc)}
+.gg{display:grid;gap:12px}.gcd{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:8px;cursor:pointer;min-width:0}.gcd:hover{border-color:var(--ac)}.gh{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.gh b{font:700 24px var(--mono)}.gh span{font-size:16px;font-weight:600;color:var(--tx);opacity:.85}.gh i{margin-left:auto;font-style:normal;color:var(--bestc)}
 .gpv{display:flex;align-items:center;justify-content:center;padding:10px;border-radius:8px;border:1px solid var(--line);background-color:var(--stage);overflow:hidden}.gpv .body{margin:0}
 .gbar{height:6px;border-radius:3px;background:var(--line);overflow:hidden}.gbar i{display:block;height:100%;background:var(--c)}
-.gm{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--mu)}.gm b{color:var(--tx);font:600 13px var(--mono);text-align:right}#stage.dg{cursor:grabbing}#stage.sd [data-id]{cursor:grab;touch-action:none}#stage.sd .body,#stage.sd .scr{user-select:none}.rsb{position:absolute;left:12px;top:34px}.sdh{position:absolute;left:12px;bottom:8px;margin:0}#ov .scr{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.gm{display:flex;flex-direction:column;gap:3px;font-size:13px;color:var(--mu)}.gm b{color:var(--tx);font:600 16px var(--mono);text-align:left;overflow-wrap:anywhere}.gx{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:12px 16px}.gbar{grid-column:1/-1}@media(max-width:700px){.gx{grid-template-columns:1fr;gap:8px}.gm b{font-size:15px;overflow-wrap:normal}}#stage.dg{cursor:grabbing}#stage.sd [data-id]{cursor:grab;touch-action:none}#stage.sd .body,#stage.sd .scr{user-select:none}.rsb{position:absolute;left:12px;top:34px}.sdh{position:absolute;left:12px;bottom:8px;margin:0}#ov .scr{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
 .tg2{position:absolute;z-index:3;font:600 10px var(--mono);color:#0b0d13;padding:1px 6px;border-radius:4px;white-space:nowrap;max-width:90%;overflow:hidden;text-overflow:ellipsis}
-.chs{fill:rgba(25,30,45,.75);stroke-width:2}.chs.ov{fill:rgba(25,30,45,.2)}[data-theme=crt] .chs{fill:rgba(5,25,10,.8)}
+.chs{fill:rgba(18,18,18,.82);stroke-width:2}.chs.ov{fill:rgba(18,18,18,.22)}[data-theme=crt] .chs{fill:rgba(5,25,10,.8)}
 .cx{fill:rgba(255,255,255,.07);stroke:rgba(255,255,255,.35);stroke-width:1}
 .lt{font:600 9px var(--mono);fill:rgba(255,255,255,.55);text-anchor:middle}
 .dmg path{stroke:var(--smu);stroke-width:1;fill:none}.dmg .ext{stroke-dasharray:2 3;opacity:.7}
@@ -94,6 +97,7 @@ button.sec{background:transparent;color:var(--tx);border:1px solid var(--line)}
 .caldia{display:flex;flex-direction:column;gap:6px;align-items:center}.caldia{flex:1 1 100%}.calfoot .caldia .seg{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:4px;height:auto;flex:none;width:100%;max-width:640px;border-radius:16px;padding:4px}.calfoot .caldia .seg button{flex:0 0 auto;width:auto;border-radius:12px;padding:6px 10px}.calst{flex:1 1 100%}.diain{display:flex;align-items:center;gap:6px;font-size:13px}.diain input{width:72px}.calst{font-size:13px;text-align:center}
 .cardref{position:absolute;right:10px;top:10px;border:2px dashed var(--mu);border-radius:8px;font:500 10px var(--mono);color:var(--mu);display:flex;align-items:center;justify-content:center}
 .lgb{width:auto;min-height:0;margin:0;padding:5px 11px;font:500 13px var(--ui);background:var(--panel2);color:var(--tx);border:1px solid var(--c);border-radius:999px}.lgb.on{background:var(--c);color:#0b0d13;font-weight:700}
+body[data-theme=light] .lgb.on{color:#fff}
 .tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
 table{width:100%;border-collapse:collapse;font:12.5px var(--mono);font-variant-numeric:tabular-nums}
 th{background:var(--panel2);color:var(--mu);font:600 10.5px var(--ui);letter-spacing:.08em;text-transform:uppercase;text-align:left;padding:10px;white-space:nowrap;border-bottom:1px solid var(--line)}
@@ -128,25 +132,25 @@ aside h2{cursor:pointer;justify-content:space-between}aside h2::after{content:"\
 .ri{display:flex;align-items:center;gap:10px;padding:8px 10px;cursor:pointer;border-bottom:1px solid var(--line)}
 .ri:last-child{border-bottom:0}.ri:hover{background:var(--hov)}
 .ri .t{flex:1;min-width:0}.ri b{display:block;font-size:14px;font-weight:600;color:var(--stx)}
-.ri small{display:block;font:13px var(--mono);color:var(--smu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ri small{display:block;font:13px var(--mono);color:var(--smu);white-space:normal;overflow-wrap:anywhere}
 .ri .fi{margin:0;flex:none;width:20px;height:20px}
-.ed{font:600 13px var(--ui);color:var(--stx);border:1px solid var(--smu);border-radius:6px;padding:2px 7px;flex:none}.ed:hover{background:var(--ac);color:var(--acx);border-color:var(--ac)}
+.ad,.ed{width:32px;height:32px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;flex:none;cursor:pointer;border:1px solid var(--smu);color:var(--stx);background:transparent}.ad{color:var(--acx);background:var(--ac);border-color:var(--ac)}.ad:hover{filter:brightness(1.12)}.ad.done{background:var(--bestc,#2f7a00);border-color:var(--bestc,#2f7a00);color:#fff}.ed:hover,.ed:focus-visible{background:var(--ac);color:var(--acx);border-color:var(--ac)}
 .mobnote{display:none}
 .scr.ovs{background:transparent;box-shadow:none;outline:1px dashed var(--c);outline-offset:0;overflow:visible}.scr.ovs.hv{background:rgba(0,0,0,.45)}
-.chs.ov.dim{fill:none;stroke-width:1.5;stroke-dasharray:2 4}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}.chs.ov.dim{fill:none;stroke-width:1.5;stroke-dasharray:2 4}
 .stk{position:relative;flex:none}.stk .scr{position:absolute}
 .cx.rg,.cx.rl{fill:none;stroke-dasharray:5 4}
 .tinfo{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}.tinfo span{border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:13px;line-height:1.35}.tinfo b{font-weight:600}
 
 :root{--bestc:#a3e635}
-body[data-theme=light]{--page:#d2d5da;--bg:#dcdfe4;--panel:#e5e7eb;--panel2:#d8dbe0;--line:#b9bec7;--tx:#141a26;--mu:#566075;--ac:#e2490f;--acx:#fff;--hov:#e6eaf2;--stage:#d9dce1;--grid:#cdd1d8;--grid2:#bcc1ca;--smu:#566075;--stx:#141a26;--bestc:#2f7a00}
-body[data-theme=light] .chs{fill:rgba(207,213,223,.95)}body[data-theme=light] .chs.ov{fill:rgba(207,213,223,.32)}
+body[data-theme=light]{--pb:#8f897b;--lc:#3a352c;--page:#d9d6cf;--bg:#e2dfd8;--panel:#ebe8e1;--panel2:#dfdcd4;--line:#bdb8ac;--tx:#1d1a15;--mu:#554f44;--ac:#9a2a5c;--acx:#fff;--hov:#e6e2d9;--stage:#e7e4dd;--grid:#d9d5cc;--grid2:#bdb8ac;--smu:#554f44;--stx:#1d1a15;--bestc:#2f7a00}
+body[data-theme=light] .chs{fill:rgba(204,200,190,.95)}body[data-theme=light] .chs.ov{fill:rgba(204,200,190,.32)}
 body[data-theme=light] .cx{fill:rgba(20,26,38,.07);stroke:rgba(20,26,38,.35)}body[data-theme=light] .lt{fill:rgba(20,26,38,.6)}
-body[data-theme=light] .scr{box-shadow:none;background:#2a3140}
+body[data-theme=light] .scr{box-shadow:none;background:#3a3936}
 td.best{color:var(--bestc);font-weight:700}td.best::after{content:" \25B2";font-size:.7em}
 .ct{position:relative}
 .refo{flex:none;border:2px dashed var(--mu);display:flex;align-items:center;justify-content:center;font:500 10px var(--mono);color:var(--mu);text-align:center;overflow:hidden;background:rgba(148,163,184,.1)}
-.exp{display:flex;gap:8px}.exp button{margin-top:10px}
+.exp{display:flex;gap:8px;flex-wrap:wrap}.exp button{margin-top:10px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;width:auto;font-size:14px}.bi{width:17px;height:17px;flex:none}.loadrow[hidden]{display:none}
 .loadrow{display:flex;gap:8px;margin-top:10px}.loadrow button{width:auto;flex:none;margin:0}
 #toast{min-height:18px}
 .opt .sec.inl{width:auto;flex:none;margin:0}
@@ -184,8 +188,237 @@ td.best{color:var(--bestc);font-weight:700}td.best::after{content:" \25B2";font-
 .gl,.shr{margin-top:10px;font-size:13px;color:var(--mu)}.gl summary,.shr summary{cursor:pointer;padding:4px 0}.gl ul{margin:6px 0 0;padding-left:18px;line-height:1.6}.gl li b{color:var(--tx);font-weight:600}
 .shr[open] .exp{margin-bottom:0}
 @media(max-width:700px){.cmp{grid-template-columns:1fr}.cc-hero{flex-wrap:wrap}.mrow{grid-template-columns:96px 1fr auto}}
+
+/* desktop: texto +1 */
+@media(min-width:901px){body{font-size:16px}table{font-size:14px}
+header p{font-size:15px}
+header .seg button{font-size:14px}
+#mode{font:500 13px var(--mono)}
+h2{font:600 14px var(--hd)}
+label{font-size:14px}
+input,select{font-size:15px}
+button{font:600 15px var(--ui)}
+.seg button,.tabs button{font-size:14px}
+.tg{font-size:14px}
+.hint{font-size:14px}
+.kofi{font-size:14px}
+.chip{font-size:14px}
+.chip b{font-size:13px}
+.lbl{font:500 14px var(--ui)}
+.rst{font:600 16px var(--ui)}
+.k-real .pd{font:400 14px var(--mono);white-space:normal}.k-real label{font-size:16px}
+.calref{font-size:14px}
+.tbar .seg button{font-size:14px}
+.tbar #bStack{font:500 14px var(--ui)}
+.tbar .tg{font-size:14px}
+.tbar .opt label{font-size:14px}
+.wl-h b{font:700 16px var(--ui)}
+.wl-q{font:500 15px var(--ui)}
+.vt{font:500 13px var(--ui)}
+.vt b{font:600 14px var(--ui)}
+.vt small{font:400 13px var(--ui)}
+.gh span{font-size:17px}
+.gm{font-size:14px}
+.gm b{font:600 17px var(--mono)}
+.diain{font-size:14px}
+.calst{font-size:14px}
+.lgb{font:500 14px var(--ui)}
+.rk{font:600 14px var(--mono)}
+.pill{font:500 14px var(--ui)}
+.ri b{font-size:15px}
+.tinfo span{font-size:14px}
+.calbar b{font:700 15px var(--hd)}
+.calobj{font:500 14px var(--mono)}
+.calctl output{font:500 14px var(--mono)}
+.cc-k{font:600 13px var(--ui)}
+.cc-big.sm{font-size:18px}
+.mrow{font-size:14px}
+.mrow .v{font:600 14px var(--mono)}
+.gl,.shr{font-size:14px}
+}
+.rbadge{position:absolute;right:12px;top:10px;z-index:6;display:flex;align-items:center;gap:7px;background:var(--ac);color:var(--acx);border-radius:8px;padding:4px 9px 4px 5px;box-shadow:0 3px 10px #0004;pointer-events:none}.rbadge b{font:800 16px/1 var(--mono);letter-spacing:-.02em;background:var(--acx);color:var(--ac);border-radius:5px;padding:3px 5px}.rbadge span{display:flex;flex-direction:column;gap:1px}.rbadge em{font:800 12px/1.1 var(--ui);font-style:normal;letter-spacing:.08em;text-transform:uppercase}.rbadge small{font:500 10.5px/1.2 var(--ui);opacity:.92}#stage.is-real .cardref{top:46px}
+
+/* comparison cards: calmer colour, larger text */
+.cc{border-left-width:3px}
+.cc .mbar{height:7px}.cc .mbar i{background:var(--mu);opacity:.75}.cc .cc-hv>.mbar i{background:var(--c);opacity:.8}
+.cc .rk,.cc .rk.r1,.cc .rk.r2,.cc .rk.r3{background:var(--hov);color:var(--tx);border:1px solid var(--line)}
+.cc .tag{color:var(--tx);border-color:var(--mu);font-size:11px;padding:1px 7px}
+.cc .mrow.best .v{color:var(--tx)}
+.cc-th{filter:saturate(.7)}
+.cc-h{font-size:16px}.cc-h small{font-size:13px}
+.cc-k{font-size:13px}.cc-big{font-size:30px}.cc-big.sm{font-size:20px}
+.cc-sub{font-size:13.5px}
+.mrow{font-size:15px;grid-template-columns:128px 1fr auto}.mrow .v{font-size:15px}
+.cc-spec{font-size:13px}
+.cmp{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+@media(max-width:700px){.cmp{grid-template-columns:1fr}.mrow{grid-template-columns:110px 1fr auto}.cc-big{font-size:28px}}
+
+.cc,.cc{border-left:1px solid var(--line)}
+.cc-h small{flex:0 0 100%;margin:0;padding-left:0;text-align:left;font-size:13px}
+.cc-h{row-gap:4px}
+.cc-hero{align-items:center}.cc-tw{width:112px}
+
+/* control bar (sistema / imagen / ajuste) */
+.ctl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 12px;position:relative}
+.ctl .grp{display:flex;align-items:center;gap:4px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:4px;position:relative}
+.ctl .grp>small{color:var(--mu);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:0 6px 0 8px;font-weight:600}
+.ctl .b{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--hov);color:var(--tx);border-radius:7px;padding:6px 10px;font:500 14px var(--ui);cursor:pointer;width:auto;margin:0}
+.ctl .b .bi{width:14px;height:14px}.tbar .sic{display:inline-flex;align-items:center}.tbar .sic svg{width:20px;height:15px;display:block;fill:none;stroke:currentColor;stroke-width:2.2}.tbar .sic .f{fill:currentColor;fill-opacity:.28}.tbar .sic .f2{fill:currentColor;fill-opacity:.14}.ctl .sic svg{width:22px;height:16px;display:block;fill:none;stroke:currentColor;stroke-width:1.6}.ctl .sic .f{fill:currentColor;fill-opacity:.28}.ctl .sic .f2{fill:currentColor;fill-opacity:.14}
+.ctl .grp>.vb{display:flex;margin:0;gap:2px}.ctl .grp>.vb .vt{flex-direction:row;gap:7px;width:auto;padding:6px 10px;border:1px solid transparent;background:transparent;border-radius:7px;font-size:14px;color:var(--mu)}
+.ctl .grp>.vb .vt b{font:500 14px var(--ui)}.ctl .grp>.vb .vt small{display:none}.ctl .grp>.vb .vt .vi{width:22px;max-width:none;height:16px}
+.ctl .grp>.vb .vt.on{background:var(--hov);color:var(--tx);border-color:var(--line)}
+.ctl #file{max-width:190px;font-size:12px;margin:0 4px;display:none}
+.ctl .grp>.vb.off{opacity:.4}
+.ctl select{display:none}
+.pop{position:absolute;top:calc(100% + 8px);left:0;z-index:30;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:0 14px 34px #000a;width:min(460px,92vw);max-height:70vh;overflow:auto}
+.pop[hidden]{display:none}.pop-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.pop-h b{font:600 12px var(--ui);letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}.pop-h .x{display:none;width:32px;height:32px;padding:0;border:1px solid var(--line);background:transparent;color:var(--tx);border-radius:8px;font-size:20px;line-height:1;cursor:pointer}
+.pop .vg{grid-template-columns:repeat(4,1fr)}.pop .vb{margin:0 0 6px}.pop select{display:block}
+@media(max-width:900px){.pop{position:fixed;left:8px;right:8px;bottom:8px;top:auto;width:auto;max-height:78vh;z-index:60}.pop-h .x{display:block}.pop .vg{grid-template-columns:repeat(3,1fr)}.ctl .grp>.vb .vt b{display:none}.ctl .grp>.vb .vt{padding:7px 9px}.ctl .grp>small{padding:0 4px 0 6px}}
+
+/* single-row toolbar */
+.tbar{gap:8px;flex-wrap:wrap}.tbar .tsp{flex:1}
+.pwrap{position:relative}
+.tbar .b,.tbar .tg{display:inline-flex;align-items:center;gap:7px;margin:0;width:auto;min-height:0;padding:7px 12px;font:500 14px var(--ui);color:var(--mu);background:transparent;border:1px solid transparent;border-radius:9px;cursor:pointer;position:relative;white-space:nowrap}
+.tbar .b{background:var(--panel2);border-color:var(--line);color:var(--tx)}
+.tbar .tg:hover,.tbar .b:hover{border-color:var(--mu)}
+.tbar .tg .bi{width:18px;height:16px}.tbar .b .bi:not(.car){width:18px;height:16px}.tbar .b .car{width:14px;height:14px}
+.tbar .tg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.tbar .tg:has(input:checked),.tbar #bStack.on{background:var(--hov);border-color:var(--line);color:var(--tx)}
+.tbar .tg:has(input:focus-visible){outline:2px solid var(--ac);outline-offset:2px}
+.tbar #bStack{border-radius:9px;font:500 14px var(--ui);padding:7px 12px}.tbar #bStack:disabled{opacity:.4}
+.tbar .opt label{display:none}
+.pop .vsc{grid-template-columns:repeat(3,1fr)}.pop #file{display:none;margin:8px 0 0;font-size:13px;max-width:100%}
+
+
+.pop{width:min(560px,92vw)}
+.pop .vt{padding:10px 4px 9px;gap:5px}.pop .vt b{font-size:15px}.pop .vt small{font-size:13px}.pop .vt .vi{height:42px;max-width:68px}
+.pop .vg{gap:8px}
+@media(max-width:900px){.pop{width:auto}.pop .vt .vi{height:38px}}
+
+@media(min-width:901px){
+.tbar{position:relative}
+.pop.wide{left:0;width:min(1000px,calc(100vw - 40px));display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:0 16px;align-items:start}
+.pop.wide>.pop-h{grid-column:1/-1}
+.pop.wide>.vb{grid-column:1;grid-row:2/span 4;margin:0}
+.pop.wide .dsub .vt{padding:6px 3px 5px;gap:3px}.pop.wide .dsub .vt .vi{height:28px}.pop.wide .dsub .vt b{font-size:14px}.pop.wide .dsub .vb{margin:0 0 4px}.pop.wide .dsub{padding:6px 10px 2px;margin:0 0 8px}
+.pop.wide>#custBox,.pop.wide>#layBox,.pop.wide>#dualBox{grid-column:2;margin-top:0}
+}
+
+.pn{display:inline-block;margin-left:7px;padding:0 6px;border:1px solid var(--line);border-radius:5px;font:600 11px/17px var(--mono);letter-spacing:.03em;color:var(--mu);vertical-align:1px;white-space:nowrap;font-weight:600}
+.ri b .pn{font-size:10.5px}
+
+.pwrap.r .pop{left:auto;right:0}
+#datPop{width:min(900px,calc(100vw - 40px))}
+.dtw{overflow:auto}
+@media(max-width:900px){#datPop{width:auto}.pwrap.r .pop{left:8px;right:8px}}
+
+#stageCard{container-type:inline-size}
+
+
+/* light comparison cards */
+.cmp{grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
+.cc{flex-direction:row;align-items:center;gap:14px;padding:12px 14px;border-left-width:1px}
+.cc-tw{width:84px}
+.cc-hv{flex:1;min-width:0}
+.cc-h{gap:7px;flex-wrap:wrap}.cc-n{font-size:15px;font-weight:600}
+.cc-s0{font:12.5px var(--mono);color:var(--mu);margin-top:3px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}.cc-s0 .pn{margin:0}.cc-s0 .tag{margin:0}
+.cc-big{font:700 28px/1.1 var(--mono);margin:6px 0 4px}.cc-big.sm{font-size:19px}.cc-big .tag{margin-left:8px;vertical-align:4px}.cc-big small{font:500 12px var(--ui);color:var(--mu);letter-spacing:.08em;text-transform:uppercase;margin-left:7px}
+.cc .mbar{height:3px;margin-bottom:6px}
+.cc-ln{font-size:13.5px;color:var(--mu)}.cc-ln b{color:var(--tx);font:600 13.5px var(--mono)}
+#tblCard h2{display:flex;align-items:center;gap:10px}.cmpt{margin-left:auto!important}
+.cmpt{white-space:nowrap;display:inline-flex;align-items:center;gap:6px;width:auto;margin:0;padding:5px 10px;font:500 13px var(--ui);text-transform:none;letter-spacing:0;color:var(--tx);background:var(--panel2);border:1px solid var(--line);border-radius:8px;cursor:pointer}
+.cmpt .car{width:14px;height:14px;transition:transform .15s}
+#tblCard.cmp-off .cmpt .car{transform:rotate(180deg)}#tblCard.cmp-off #cmpBody{display:none}#tblCard.cmp-off h2{margin-bottom:0}
+@media(max-width:700px){.cmp{grid-template-columns:1fr}.cc-tw{width:72px}}
+
+.pwrap.r .pop{left:auto;right:0}
+#datPop{width:min(1020px,calc(100vw - 40px))}
+#datPop .pop-h{gap:12px}#datPop .pop-h b{margin-right:auto}#datPop .seg{margin:0}
+#datPop .cmp{grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+#datPop .tinfo{margin:0 0 10px}
+#datPop .gl{margin-top:12px}
+#datBtn.new::after{content:"";position:absolute;top:-3px;right:-3px;width:9px;height:9px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 2px var(--panel)}
+@media(max-width:900px){#datPop{width:auto}}
+
+.cc-sts{display:flex;gap:16px;margin:2px 0 6px}
+.cc-st{display:flex;flex-direction:column;min-width:0}.cc-st b{font:600 15px var(--mono);color:var(--tx)}.cc-st.bst b::after{content:" \25B2";font-size:.6em;vertical-align:2px}
+.cc-st span{font:600 10.5px var(--ui);letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}
+.cc-dm{font:12px var(--mono);color:var(--mu);line-height:1.4}
+
+.cc-big{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 7px}.cc-big small{margin-left:0}.cc-big .tag{margin:0;white-space:nowrap;align-self:center}
+
+#imgPop{width:min(410px,92vw)}
+#imgPop .vt{padding:9px 3px 8px}#imgPop .vt b{font-size:14px}#imgPop .vt small{font-size:12px}#imgPop .vt .vi{height:36px;max-width:58px}
+#imgPop .pop-h{margin-bottom:6px}
+@media(max-width:900px){#imgPop{width:auto}}
+
+#stage{transition:filter .16s ease,opacity .16s ease,min-height .35s cubic-bezier(.22,.7,.2,1)}
+#stageCard.dim #stage{filter:blur(6px);opacity:.6;pointer-events:none}
+@keyframes popin{from{opacity:0;transform:translateY(-4px) scale(.985)}to{opacity:1;transform:none}}
+.pop:not([hidden]){animation:popin .13s ease-out}
+@media(max-width:900px){@keyframes popin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+
+.cc{align-items:stretch}.cc-tw{align-self:center}.cc-hv{align-self:flex-start}
+
+#datPop .cc{gap:12px;padding:12px}#datPop .cc-tw{width:64px}#datPop .cc-sts{gap:12px}
+
+/* compact header */
+header{padding:8px 20px}
+h1{font-size:clamp(15px,4.5vw,18px)}
+header>div:first-child{display:flex;align-items:center;gap:6px 18px;flex-wrap:wrap}
+header p{margin:0;font-size:14px}
+header .seg button{min-height:28px;padding:4px 12px}
+@media(max-width:700px){header{padding:8px 12px}header p{display:none}}
+
+#viewPop{width:min(560px,92vw)}
+.vtg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.vtg .tg,.vtg #bStack,.vtg #bCol{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;margin:0;width:auto;padding:12px 6px;min-height:78px;font:500 14px var(--ui);color:var(--mu);background:var(--panel2);border:1px solid var(--line);border-radius:10px;cursor:pointer;position:relative;text-align:center}
+.vtg .tg .bi{width:26px;height:20px}
+.vtg .tg:hover{border-color:var(--ac)}
+.vtg .tg:has(input:checked),.vtg #bStack.on,.vtg #bCol.on{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 16%,var(--panel2));color:var(--tx)}
+.vtg .tg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.vtg #bStack:disabled,.vtg #bCol:disabled{opacity:.4;cursor:default}
+.pills{display:flex;flex-direction:column;gap:8px;margin:12px 0 0}.pg{display:flex;flex-direction:column;gap:5px}.pg-l{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}.pgp{display:flex;flex-wrap:wrap;gap:5px}.pills .pill{padding:3px 9px;font:500 13px var(--ui)}.pclr{align-self:flex-start;background:none;border:0;padding:2px 0;font:500 13px var(--ui);color:var(--mu);text-decoration:underline;cursor:pointer;width:auto;min-height:0;margin:0}.pclr:hover{color:var(--tx)}.pclr[hidden]{display:none}
+.rbadge{pointer-events:auto;gap:2px;padding:0}.rbadge button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:7px}.rbadge{gap:4px;padding:6px 7px 6px 6px;border-radius:10px;align-items:center}.rb-m{padding:0 14px 0 0;gap:9px}.rbadge b{padding:5px 7px;border-radius:6px}.rb-e{width:32px;height:32px;margin-right:1px;justify-content:center;border-radius:50%;background:color-mix(in srgb,var(--acx) 20%,transparent);opacity:1}.rb-e svg{width:15px;height:15px;stroke-width:1.8}.rb-e:hover,.rb-e:focus-visible{background:color-mix(in srgb,var(--acx) 32%,transparent)}.rbadge.off .rb-e{background:var(--hov)}.rbadge small{display:block;font:500 11.5px/1.2 var(--mono);opacity:.85;letter-spacing:0}.rbadge.off{background:var(--panel);color:var(--mu);border:1px solid var(--line);box-shadow:none}.rbadge.off b{background:var(--line);color:var(--tx)}.rbadge.off .rb-m:hover{color:var(--tx)}
+.k-real{display:none!important}
+@media(min-width:901px){aside{position:sticky;top:16px;align-self:start;max-height:calc(100vh - 32px);display:flex;flex-direction:column}aside .k-add{flex:1;min-height:0;display:flex;flex-direction:column;overflow:auto;margin-bottom:10px}#paPre{display:flex;flex-direction:column;min-height:0;flex:1}#paPre .rsl{flex:1;min-height:150px;max-height:none}aside .k-add>*{flex:none}aside .k-add>#paPre{flex:1 1 auto}.k-add .chips{max-height:116px;overflow:auto}
+.k-add .pill:not(.on){color:var(--tx);border-color:var(--pb,#6a6a6a);font-size:14.5px;padding:5px 12px}.k-add .pill.on{font-size:14.5px;padding:5px 12px}
+.k-add .pg-l{font-size:12px;color:var(--lc,#d0d0d0)}
+.k-add .pg:not([data-k=b]) .pgp{flex-wrap:nowrap;gap:4px}.k-add .pg:not([data-k=b]) .pill{flex:1 1 auto;min-width:0;padding:5px 3px;font-size:13.5px;text-align:center;white-space:nowrap}.k-add .pgp{gap:6px}.k-add .pills{gap:10px}
+.k-add .chips{flex-direction:column;flex-wrap:nowrap;gap:6px}.k-add .chip{width:100%;box-sizing:border-box;flex:none}.k-add .chip span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}aside .kofi{flex:none}}
+.calov{background:color-mix(in srgb,var(--page) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.calov .calbar{background:transparent;border:0;padding:18px 24px 0;justify-content:space-between;flex-wrap:nowrap}.cal-t{display:flex;flex-direction:column;gap:3px}.calov .calbar b{font:700 14px var(--mono);letter-spacing:.1em}
+.calx{all:unset;box-sizing:border-box;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:var(--mu);font:400 22px/1 var(--ui);cursor:pointer}.calx:hover,.calx:focus-visible{color:var(--tx);border-color:var(--mu)}
+.calov .calobj{background:var(--panel);color:var(--tx);border:2px dashed var(--ac);box-shadow:0 10px 40px #0005;font:500 13px var(--mono)}
+.calpanel{width:min(960px,calc(100% - 32px));margin:0 auto 20px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:0 10px 40px #0004;max-height:62vh;overflow:auto;display:flex;flex-direction:column;gap:16px}
+.calcols{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:800px){.calcols{grid-template-columns:1fr;gap:18px}}
+.cs{display:flex;flex-direction:column;gap:10px;min-width:0}.cs-h{display:flex;align-items:center;gap:9px}.cs-h b{font:600 15px var(--ui);color:var(--tx);letter-spacing:0;text-transform:none}.cs-h .hint{margin:0 0 0 auto}
+.cs-h i{font:700 12px var(--mono);font-style:normal;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--ac);color:var(--acx);flex:none}
+.cs-r{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.cs-r .hint{margin:0}
+.calpanel .seg{display:flex;flex-wrap:wrap;gap:6px;height:auto;width:auto;max-width:none;flex:none;padding:0;border:0;background:none;border-radius:0}
+.calpanel .seg button{flex:none;width:auto;min-height:0;margin:0;padding:5px 12px;font:500 14px var(--ui);letter-spacing:0;color:var(--mu);background:transparent;border:1px solid var(--line);border-radius:999px}.calpanel .seg button:hover{color:var(--tx);border-color:var(--mu)}.calpanel .seg button.on{background:var(--ac);color:var(--acx);border-color:var(--ac)}
+.calpanel .diain input{width:96px}.calpanel input[type=range]:focus{outline:none}.calpanel .calctl{flex:none;width:100%}.calpanel .calctl output{min-width:84px}.calpanel .calctl button{width:34px;min-height:34px;border-radius:50%}
+.calpanel .calact{justify-content:flex-end;border-top:1px solid var(--line);padding-top:14px}
+.gpv{background-image:linear-gradient(var(--grid2) 1px,transparent 1px),linear-gradient(90deg,var(--grid2) 1px,transparent 1px),linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:50px 50px,50px 50px,10px 10px,10px 10px}
+.gcd{gap:10px}.gx{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px 18px;align-items:start}.gm{gap:1px;font-size:12.5px}.gm b{font:600 15px var(--mono)}
+@media(max-width:700px){.gx{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 12px}.gm b{font-size:14px}}
+.gx{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:8px 32px}.gx .gm{flex:0 0 auto;min-width:0}
+#gal{transition:filter .16s ease,opacity .16s ease}#stageCard.dim #gal{filter:blur(6px);opacity:.6;pointer-events:none}
+@media(max-width:700px){.gx{gap:8px 22px}}
+@media(min-width:901px){
+#viewPop .vtg .tg,#viewPop .vtg #bStack,#viewPop .vtg #bCol{min-height:108px;gap:9px;font-size:15px}#viewPop .vtg .tg .bi{width:34px;height:26px}
+#datPop{width:min(1200px,calc(100vw - 40px))}
+#datPop .cmp{grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+#datPop .cc{padding:18px 20px;gap:16px}#datPop .cc-tw{width:92px}
+#datPop .cc-n{font-size:18px}#datPop .cc-s0{font-size:14px}
+#datPop .cc-big{font-size:36px}#datPop .cc-big.sm{font-size:22px}#datPop .cc-big small{font-size:13.5px}
+#datPop .cc-st b{font-size:18px}#datPop .cc-st span{font-size:12px}#datPop .cc-sts{gap:20px}
+#datPop .cc-ln,#datPop .cc-ln b{font-size:14.5px}
+#datPop .tinfo span{font-size:14.5px;padding:5px 10px}#datPop .hint{font-size:14px}
+#datPop .pop-h b{font-size:17px}
+}
 </style></head><body data-theme="studio">
-<header><div><h1><svg class="ic" viewBox="0 0 8 8"><path fill-rule="evenodd" d="M1 2h6v1h1v3H7v1H1V6H0V3h1zM2 3v2h1V3zm3 0v2h1V3z"/></svg>Retro Screen Comparator</h1><p>Compara pantallas, bordes negros y escalado entero de sistemas retro <span id="mode"></span></p></div><div class="hr"><div class="seg" id="langs" role="group" aria-label="Idioma / Language"><button type="button" data-l="es" lang="es">ES</button><button type="button" data-l="en" lang="en">EN</button></div><div class="seg" id="themes"><button type="button" data-t="studio">Studio</button><button type="button" data-t="light">Claro</button></div></div></header>
+<header><div><h1><svg class="ic" viewBox="0 0 8 8"><path fill-rule="evenodd" d="M1 2h6v1h1v3H7v1H1V6H0V3h1zM2 3v2h1V3zm3 0v2h1V3z"/></svg>Retro Screen Comparator</h1><p>Compara pantallas, bordes negros y escalado entero de sistemas retro <span id="mode"></span></p></div><div class="hr"><div class="seg" id="langs" role="group" aria-label="Idioma / Language"><button type="button" data-l="es" lang="es">ES</button><button type="button" data-l="en" lang="en">EN</button></div><div class="seg" id="themes"><button type="button" data-t="studio">Studio</button><button type="button" data-t="light">DMG</button></div></div></header>
 <div class="wrap">
 <aside>
  <div class="card k-real"><h2><svg class="ic" viewBox="0 0 8 8"><path fill-rule="evenodd" d="M0 3h8v3H0zM1 4v2h1V4zm2 0v2h1V4zm2 0v2h1V4z"/></svg>Escala real</h2>
@@ -194,8 +427,8 @@ td.best{color:var(--bestc);font-weight:700}td.best::after{content:" \25B2";font-
   <div class="pd" id="ppcd"></div>
   <input type="hidden" id="ppc" value="37.8">
   <button type="button" id="calOpen" class="sec">Cambiar pantalla o afinar</button></div>
- <div class="card k-add"><h2><svg class="ic" viewBox="0 0 8 8"><path d="M3 0h2v3h3v2H5v3H3V5H0V3h3z"/></svg>Añadir consola</h2><div class="seg" style="display:none"><button type="button" id="mPre" class="on">Predefinida</button><button type="button" id="mMan">Datos a mano</button></div>
-  <div id="paPre"><input aria-label="Buscar consola" type="search" id="searchPre" placeholder="Buscar consola (ej. Nova, Thor, Duo, Rotate, OLED, 4:3)..." autocomplete="off"><div class="pills" id="pills"></div><div class="rsl" id="rsl"></div><div class="hint" id="rsc"></div></div>
+ <div class="card k-add"><h2><svg class="ic" viewBox="0 0 8 8"><path fill-rule="evenodd" d="M0 1h8v6H0zM1 2v4h6V2zM2 3h1v1h1v1H3v1H2V5H1V4h1zM5 3h1v1H5zm1 1h1v1H6z"/></svg>Añadir consola</h2><div class="seg" style="display:none"><button type="button" id="mPre" class="on">Predefinida</button><button type="button" id="mMan">Datos a mano</button></div>
+  <div id="paPre"><input aria-label="Buscar consola" type="search" id="searchPre" placeholder="Buscar consola (ej. Nova, Thor, Duo, Rotate, OLED, 4:3)..." autocomplete="off"><div class="pills" id="pills"></div><div class="rsl" id="rsl"></div></div>
   <div id="paMan" style="display:none">
  <button type="button" id="backPre" class="sec" style="margin:0 0 8px">← Volver a la lista de consolas</button>
   
@@ -219,63 +452,65 @@ td.best{color:var(--bestc);font-weight:700}td.best::after{content:" \25B2";font-
   <button type="button" id="add">[+] Añadir a la comparación</button></div>
   <div class="chips" id="chips"></div>
   <button type="button" id="reset" class="sec">Limpiar todo</button></div>
- <div class="card k-sys"><h2><svg class="ic" viewBox="0 0 8 8"><path fill-rule="evenodd" d="M0 1h8v6H0zM1 2v4h6V2z"/></svg>Sistema retro</h2><select aria-label="Sistema retro" id="sys"></select>
-  <div id="custBox" style="display:none"><div class="row"><div><label>Proporción X</label><input id="cuW" type="number" min="1" step="any" value="4"></div><div><label>Proporción Y</label><input id="cuH" type="number" min="1" step="any" value="3"></div></div><div class="row"><div><label>Resolución X</label><input id="cuNW" type="number" min="1" value="320"></div><div><label>Resolución Y</label><input id="cuNH" type="number" min="1" value="240"></div></div></div><div class="dsub" id="layBox" style="display:none"><div class="dtag">Doble pantalla · disposición</div>
-   <div class="subt">Disposición en pantalla única</div><select aria-label="Disposición en pantalla única" id="dsLay"><option value="auto">Automática (apilada o lado a lado)</option><option value="S">Apilada (arriba/abajo)</option><option value="H">Lado a lado (iguales)</option><option value="L">Grande + pequeña (Azahar «Large Screen»)</option><option value="HY">Híbrida: grande + 2 pequeñas a la derecha (melonDS)</option><option value="LV">Grande arriba + pequeña debajo</option><option value="HV">Grande arriba + 2 pequeñas debajo</option></select>
-   <div class="subt">Pantalla principal</div><select aria-label="Pantalla principal" id="dsMain"><option value="T">Superior</option><option value="B">Inferior (táctil)</option></select>
-   <div class="subt">Proporción grande : pequeña</div><select aria-label="Proporción grande y pequeña" id="dsProp"><option value="1.5">1,5×</option><option value="2" selected>2× (como NDS 512×384 + 256×192)</option><option value="3">3×</option><option value="4">4× (Azahar por defecto)</option></select></div>
-  <div class="dsub" id="dualBox" style="display:none"><div class="dtag">Doble pantalla · uso</div><select aria-label="Uso de pantalla dual" id="dualMode"><option value="both">Automático / Ambas</option><option value="top">Solo superior</option><option value="bot">Solo inferior</option></select></div></div>
- <div class="card k-img"><h2><svg class="ic" viewBox="0 0 8 8"><path fill-rule="evenodd" d="M0 1h8v6H0zM1 2v4h6V2z"/></svg>Imagen</h2><select aria-label="Tipo de imagen" id="imgMode"><option value="test">Imagen de prueba (medidas y proporción)</option><option value="scn">Escena retro (pixel art)</option><option value="up">Mi captura</option></select>
-  <input aria-label="Subir captura propia" type="file" id="file" accept="image/*" style="margin-top:6px;display:none"></div>
- <div class="card k-scm"><h2><svg class="ic" viewBox="0 0 8 8"><path fill-rule="evenodd" d="M0 1h8v6H0zM1 2v4h6V2z"/></svg>Ajuste de la imagen</h2><select aria-label="Ajuste de la imagen" id="scMode"><option value="fit">Mantener proporción (bordes negros)</option><option value="str">Estirar (llena y deforma)</option><option value="crop">Rellenar recortando</option></select>
-  <div class="hint mobnote">Nota: La escala real 1:1 requiere la versión de escritorio</div></div>
-<a class="kofi" href="https://ko-fi.com/E1E21YNT3V" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M8 14s-6-3.6-6-8a3.5 3.5 0 0 1 6-2.4A3.5 3.5 0 0 1 14 6c0 4.4-6 8-6 8z"/></svg><span>Apoya el proyecto</span></a>
+<a class="kofi" href="https://ko-fi.com/E1E21YNT3V" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M8 14s-6-3.6-6-8a3.5 3.5 0 0 1 6-2.4A3.5 3.5 0 0 1 14 6c0 4.4-6 8-6 8z"/></svg><span>Apoya el proyecto</span></a><div class="cred">Creado por Charles Married</div>
 </aside>
 <main>
  <div class="card wl" id="welcome" hidden><div class="wl-h"><b>Mira tus consolas a tamaño real</b><span class="hint" id="wlRes"></span></div>
   <div class="wl-q">¿De cuántas pulgadas es tu pantalla?</div><div class="vb vs" id="wlDia"></div>
   <div class="wl-f"><label class="diain"><input type="number" id="wlIn" min="9" max="100" step="0.1" inputmode="decimal" placeholder="Otra"> pulgadas</label><button id="wlLater" class="sec" type="button">Más tarde</button></div></div>
- <div class="card" id="stageCard"><div class="tbar" id="tbar">
-  <div class="seg" id="vSeg"><button type="button" id="vCmp" class="on">Comparar</button><button type="button" id="vRat">Por ratio</button></div>
-  <span class="tsep"></span>
-  <button id="bStack" type="button">Apilar centradas</button>
-  <label class="tg"><input type="checkbox" id="outl"> Contornos</label>
-  <span class="tsep"></span>
-  <label class="tg"><input type="checkbox" id="showBody" checked> Chasis</label>
-  <span class="tsp"></span>
-  <div class="opt"><label>Unidades</label><select id="unit"><option value="cm">Centímetros (cm)</option><option value="in">Pulgadas (in)</option></select></div></div>
+ <div class="card" id="stageCard">
+  <div class="tbar" id="tbar">
+   <div class="seg" id="vSeg"><button type="button" id="vCmp" class="on">Comparar</button><button type="button" id="vRat">Por ratio</button></div>
+   <span class="tsep"></span>
+   <div class="pwrap"><button type="button" id="sysBtn" class="b" aria-haspopup="true" aria-expanded="false" aria-controls="sysPop"><span id="sysIc" class="sic"></span><span id="sysTx"></span><svg class="bi car" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="pop" id="sysPop" hidden><div class="pop-h"><b>Sistema retro</b><button type="button" class="x" aria-label="Cerrar">×</button></div><select aria-label="Sistema retro" id="sys"></select>
+  <div id="custBox" style="display:none"><div class="row"><div><label>Proporción X</label><input id="cuW" type="number" min="1" step="any" value="4"></div><div><label>Proporción Y</label><input id="cuH" type="number" min="1" step="any" value="3"></div></div><div class="row"><div><label>Resolución X</label><input id="cuNW" type="number" min="1" value="320"></div><div><label>Resolución Y</label><input id="cuNH" type="number" min="1" value="240"></div></div></div><div class="dsub" id="layBox" style="display:none"><div class="dtag">Doble pantalla · disposición</div>
+   <div class="subt">Disposición en pantalla única</div><select aria-label="Disposición en pantalla única" id="dsLay"><option value="auto">Automática (apilada o lado a lado)</option><option value="S">Apilada (arriba/abajo)</option><option value="H">Lado a lado (iguales)</option><option value="L">Grande + pequeña (Azahar «Large Screen»)</option><option value="HY">Híbrida: grande + 2 pequeñas a la derecha (melonDS)</option><option value="LV">Grande arriba + pequeña debajo</option><option value="HV">Grande arriba + 2 pequeñas debajo</option></select>
+   <div class="subt">Pantalla principal</div><select aria-label="Pantalla principal" id="dsMain"><option value="T">Superior</option><option value="B">Inferior (táctil)</option></select>
+   <div class="subt">Proporción grande : pequeña</div><select aria-label="Proporción grande y pequeña" id="dsProp"><option value="1.5">1,5×</option><option value="2" selected>2× (como NDS 512×384 + 256×192)</option><option value="3">3×</option><option value="4">4× (Azahar por defecto)</option></select></div>
+  <div class="dsub" id="dualBox" style="display:none"><div class="dtag">Doble pantalla · uso</div><select aria-label="Uso de pantalla dual" id="dualMode"><option value="both">Automático / Ambas</option><option value="top">Solo superior</option><option value="bot">Solo inferior</option></select></div></div></div>
+   <div class="pwrap"><button type="button" id="imgBtn" class="b" aria-haspopup="true" aria-expanded="false" aria-controls="imgPop"><svg class="bi" viewBox="0 0 20 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1.5" width="18" height="13" rx="2"/><circle cx="6.5" cy="6" r="1.5"/><path d="M2 13l5-4 4 3 3-2 4 3"/></svg><span>Imagen</span><svg class="bi car" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="pop" id="imgPop" hidden><div class="pop-h"><b>Imagen</b><button type="button" class="x" aria-label="Cerrar">×</button></div><select aria-label="Tipo de imagen" id="imgMode"><option value="test">Imagen de prueba (medidas y proporción)</option><option value="scn">Escena retro (pixel art)</option><option value="up">Mi captura</option></select><input aria-label="Subir captura propia" type="file" id="file" accept="image/*">
+     <div class="subt" style="margin-top:12px">Ajuste</div><select aria-label="Ajuste de la imagen" id="scMode"><option value="fit">Mantener proporción (bordes negros)</option><option value="str">Estirar (llena y deforma)</option><option value="crop">Rellenar recortando</option></select></div></div>
+   <div class="pwrap"><button type="button" id="viewBtn" class="b" aria-haspopup="true" aria-expanded="false" aria-controls="viewPop"><svg class="bi" viewBox="0 0 20 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 8S4.5 2.5 10 2.5 18.5 8 18.5 8 15.5 13.5 10 13.5 1.5 8 1.5 8z"/><circle cx="10" cy="8" r="2.3"/></svg><span>Vista</span><svg class="bi car" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="pop" id="viewPop" hidden><div class="pop-h"><b>Vista</b><button type="button" class="x" aria-label="Cerrar">×</button></div><div class="vtg">
+   <label class="tg" title="Chasis"><input type="checkbox" id="showBody" checked><svg class="bi" viewBox="0 0 20 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="2" width="18" height="12" rx="3"/><rect x="5" y="5" width="10" height="6" rx="1"/></svg><span>Chasis</span></label>
+   <label class="tg" title="Contornos"><input type="checkbox" id="outl"><svg class="bi" viewBox="0 0 20 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="16" height="12" rx="1" stroke-dasharray="3 2.5"/></svg><span>Contornos</span></label>
+   <button id="bStack" type="button" class="tg" title="Apilar centradas"><svg class="bi" viewBox="0 0 20 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="1.5" width="12" height="5" rx="1"/><rect x="4" y="9.5" width="12" height="5" rx="1"/></svg><span>Apilar</span></button>
+   <button id="bCol" type="button" class="tg" title="Colocar todas en vertical, centradas"><svg class="bi" viewBox="0 0 20 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="0.8" width="8" height="3.8" rx="1"/><rect x="3.5" y="6.1" width="13" height="3.8" rx="1"/><rect x="6" y="11.4" width="8" height="3.8" rx="1"/></svg><span>Centrar</span></button>
+    </div></div></div>
+   <span class="tsp"></span>
+   <div class="pwrap r"><button type="button" id="datBtn" class="b" aria-haspopup="true" aria-expanded="false" aria-controls="datPop"><svg class="bi" viewBox="0 0 20 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="2" width="17" height="12" rx="2"/><path d="M1.5 6h17M7 6v8"/></svg><span>Datos</span><svg class="bi car" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="pop" id="datPop" hidden><div class="pop-h"><b>Datos de la comparación</b><button type="button" class="x" aria-label="Cerrar">×</button></div>
+     <div id="datCards"><div id="tinfo" class="tinfo"></div><div id="tbl" class="cmp" role="region" aria-label="Comparativa de pantallas"></div><div class="hint" id="ordH"></div></div>
+</div></div>
+   <span class="tsep"></span>
+   <div class="opt"><label>Unidades</label><select id="unit"><option value="cm">Centímetros (cm)</option><option value="in">Pulgadas (in)</option></select></div></div>
+  <div class="hint mobnote">Nota: La escala real 1:1 requiere la versión de escritorio</div>
   <div id="stage" tabindex="0" role="group" aria-label="Comparación visual de pantallas a escala"></div>
-  <details class="shr"><summary>Compartir y exportar</summary>
-   <div class="exp"><button type="button" id="bPng" class="sec">Descargar PNG</button><button type="button" id="bLink" class="sec">Copiar enlace</button></div>
-   <div class="loadrow"><input id="shareIn" type="text" placeholder="Pegar enlace o código para cargar una comparación" aria-label="Enlace o código de comparación"><button type="button" id="bLoad" class="sec">Cargar</button></div></details>
+  <div class="shr2"><div class="exp"><button type="button" id="bPng" class="sec" title="Descargar PNG"><svg class="bi" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg><span>Descargar PNG</span></button><button type="button" id="bLink" class="sec" title="Copiar enlace"><svg class="bi" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1 1"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1-1"/></svg><span>Copiar enlace</span></button><button type="button" id="bOpen" class="sec" title="Importar comparación" aria-expanded="false" aria-controls="loadRow"><svg class="bi" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V9"/><path d="M7 13.5l5-5 5 5"/><path d="M5 4h14"/></svg><span>Importar</span></button></div>
+   <div class="loadrow" id="loadRow" hidden><input id="shareIn" type="text" placeholder="Pegar enlace o código para cargar una comparación" aria-label="Enlace o código de comparación"><button type="button" id="bLoad" class="sec">Cargar</button></div></div>
   <div class="hint" id="toast" role="status"></div></div>
- <div class="card" id="tblCard"><h2><svg class="ic" viewBox="0 0 8 8"><path fill-rule="evenodd" d="M0 1h8v6H0zM1 2v1h6V2zM1 4v1h6V4z"/></svg>Tabla comparativa</h2><div id="tinfo" class="tinfo"></div><div id="tbl" class="cmp" role="region" aria-label="Comparativa de pantallas"></div>
-  <div class="hint" id="ordH"></div>
-  <details class="gl"><summary>¿Qué significa cada dato?</summary><ul>
-   <li><b>Juego en pantalla:</b> diagonal real de la imagen del juego una vez colocada en la pantalla. La barra la compara con la mejor.</li>
-   <li><b>Pantalla usada:</b> parte de la pantalla que ocupa la imagen; el resto son bordes negros.</li>
-   <li><b>Sobre el chasis:</b> superficie de pantalla frente a la del chasis completo (abierto en las dual-screen).</li>
-   <li><b>Escala entera:</b> mayor múltiplo exacto de la resolución original que cabe en la pantalla (píxeles nítidos) y % de pantalla que ocupa.</li>
-   <li><b>▲:</b> mejor valor entre las consolas comparadas.</li></ul></details></div>
 </main></div>
 <div id="calOv" class="calov" hidden role="dialog" aria-modal="true" aria-labelledby="calT">
- <div class="calbar"><b id="calT">Calibrar escala 1:1</b><span class="hint">Paso 1: elige la diagonal de tu pantalla. Paso 2 (opcional): afina con un objeto real hasta que el rectángulo mida lo mismo.</span></div>
+ <div class="calbar"><div class="cal-t"><b id="calT">Calibrar escala 1:1</b><span class="hint">Elige la diagonal de tu pantalla y, si quieres, afina con un objeto real.</span></div><button type="button" class="calx" id="calX" aria-label="Cerrar">×</button></div>
  <div class="calstage" id="calStage"><div id="calObj" class="calobj"><span id="calLbl"></span></div></div>
- <div class="calbar calfoot">
-  <div class="caldia"><b>1 · Diagonal de tu pantalla</b><span class="hint" id="calRes"></span>
-   <div class="seg" id="calDia"></div>
-   <label class="diain"><input type="number" id="calDiaIn" min="4" max="100" step="0.1" inputmode="decimal" placeholder="Otra"> pulgadas</label></div>
-  <b class="calst">2 · Ajuste fino (opcional)</b>
-  <div class="seg" id="calSeg"><button type="button" data-o="card">Tarjeta de crédito</button><button type="button" data-o="mtg">Carta Magic / Pokémon</button><button type="button" data-o="coin">Moneda 2 €</button></div>
-  <label class="tg calref"><input type="checkbox" id="showRef"> Dejar este objeto visible en la comparación</label>
-  <div class="calctl"><button type="button" id="calMin" class="sec" aria-label="Reducir">−</button><input type="range" id="calRng" min="10" max="160" step="0.1" aria-label="Escala en píxeles por centímetro"><button type="button" id="calPlus" class="sec" aria-label="Aumentar">+</button><output id="calVal"></output></div>
+ <div class="calpanel">
+  <div class="calcols">
+   <section class="cs"><div class="cs-h"><i>1</i><b>Diagonal de tu pantalla</b></div><div class="seg" id="calDia"></div>
+    <div class="cs-r"><label class="diain"><input type="number" id="calDiaIn" min="4" max="100" step="0.1" inputmode="decimal" placeholder="Otra"> pulgadas</label><span class="hint" id="calRes"></span></div></section>
+   <section class="cs"><div class="cs-h"><i>2</i><b>Ajuste fino</b><span class="hint">opcional</span></div>
+    <div class="seg" id="calSeg"><button type="button" data-o="card">Tarjeta de crédito</button><button type="button" data-o="mtg">Carta Magic / Pokémon</button><button type="button" data-o="coin">Moneda 2 €</button></div>
+    <div class="calctl"><button type="button" id="calMin" class="sec" aria-label="Reducir">−</button><input type="range" id="calRng" min="10" max="160" step="0.1" aria-label="Escala en píxeles por centímetro"><button type="button" id="calPlus" class="sec" aria-label="Aumentar">+</button><output id="calVal"></output></div>
+    <label class="tg calref"><input type="checkbox" id="showRef"> Dejar este objeto visible en la comparación</label></section>
+  </div>
   <div class="calact"><button type="button" id="calCancel" class="sec">Cancelar</button><button type="button" id="calOk">Aplicar</button></div>
  </div></div>
 <script>
 let LANG=(()=>{let l=null;try{l=localStorage.getItem("lang")}catch(e){}if(l!=="es"&&l!=="en")l="en";return l})();
 let DEC=LANG==="en"?".":",";
-const I18N={"Comparador de Pantallas Retro": "Retro Screen Comparator", "Compara pantallas, bordes negros y escalado entero de sistemas retro": "Compare retro console screens, black bars and integer scaling", "Compara pantallas y chasis de consolas retro y handhelds a tamaño físico real: proporciones, bordes negros y escalado entero.": "Compare retro console and handheld screens and chassis at true physical size: aspect ratios, black bars and integer scaling.", "Claro": "Light", "Modo móvil": "Mobile mode", "Modo tablet": "Tablet mode", "Modo escritorio": "Desktop mode", "Tema": "Theme", "Escala real": "Real scale", "Mostrar a tamaño real (1:1)": "Show at real size (1:1)", "Cambiar pantalla o afinar": "Change screen or fine-tune", "Sin calibrar: elige tu pantalla para ver el tamaño real.": "Not calibrated: choose your screen to see real size.", "✓ Escalado automático activo": "✓ Automatic scaling on", "Escala real desactivada": "Real scale off", "Tu pantalla:": "Your screen:", "Escala ajustada a mano": "Scale adjusted manually", "Resolución detectada:": "Detected resolution:", "Añadir consola": "Add console", "Predefinida": "Preset", "Datos a mano": "Manual entry", "← Volver a la lista de consolas": "← Back to console list", "Nombre": "Name", "Mi pantalla": "My screen", "Pantalla": "Screen", "Relación": "Ratio", "Ancho (ratio)": "Width (ratio)", "Alto (ratio)": "Height (ratio)", "Resolución X": "Resolution X", "Resolución Y": "Resolution Y", "Chasis (opcional)": "Chassis (optional)", "Chasis ancho (cm)": "Chassis width (cm)", "Chasis alto (cm)": "Chassis height (cm)", "Formato de consola": "Console format", "Vertical (tipo Game Boy)": "Vertical (Game Boy style)", "Doble pantalla (Clamshell / DS)": "Dual screen (clamshell / DS)", "Giratoria (tipo RG Rotate)": "Rotating (RG Rotate style)", "Slider (tipo RG Slide)": "Slider (RG Slide style)", "En doble pantalla, el alto del chasis es el de la consola abierta.": "For dual screens, the chassis height is that of the open console.", "Pantalla inferior": "Bottom screen", "[+] Añadir a la comparación": "[+] Add to comparison", "Guardar cambios": "Save changes", "Limpiar todo": "Clear all", "Buscar consola": "Search console", "Buscar consola (ej. Nova, Thor, Duo, Rotate, OLED, 4:3)...": "Search console (e.g. Nova, Thor, Duo, Rotate, OLED, 4:3)...", "opcional": "optional", "Todas": "All", "Sin resultados": "No results", "Usar como base y editar a mano": "Use as a base and edit manually", "Editar": "Edit", "Duplicar y editar": "Duplicate and edit", "Duplicar": "Duplicate", "Quitar": "Remove", "(copia)": "(copy)", "Añade pantallas para compararlas →": "Add screens to compare them →", "Sistema retro": "Retro system", "Proporción X": "Ratio X", "Proporción Y": "Ratio Y", "Personalizado": "Custom", "Otra": "Other", "Doble pantalla · disposición": "Dual screen · layout", "Disposición en pantalla única": "Single-screen layout", "Automática (apilada o lado a lado)": "Automatic (stacked or side by side)", "Apilada (arriba/abajo)": "Stacked (top/bottom)", "Lado a lado (iguales)": "Side by side (equal)", "Grande + pequeña (Azahar «Large Screen»)": "Large + small (Azahar “Large Screen”)", "Híbrida: grande + 2 pequeñas a la derecha (melonDS)": "Hybrid: large + 2 small on the right (melonDS)", "Grande arriba + pequeña debajo": "Large on top + small below", "Grande arriba + 2 pequeñas debajo": "Large on top + 2 small below", "Pantalla principal": "Main screen", "Superior": "Top", "Inferior (táctil)": "Bottom (touch)", "superior": "top", "inferior (táctil)": "bottom (touch)", "Proporción grande : pequeña": "Large : small ratio", "Proporción grande y pequeña": "Large and small ratio", "1,5×": "1.5×", "2× (como NDS 512×384 + 256×192)": "2× (like NDS 512×384 + 256×192)", "4× (Azahar por defecto)": "4× (Azahar default)", "Doble pantalla · uso": "Dual screen · use", "Automático / Ambas": "Automatic / Both", "Solo superior": "Top only", "Solo inferior": "Bottom only", "Ambas": "Both", "Uso de pantalla dual": "Dual-screen use", "Disposición": "Layout", "Apilada": "Stacked", "Lado a lado": "Side by side", "Grande + pequeña": "Large + small", "Híbrida": "Hybrid", "Grande arriba": "Large on top", "Grande + 2 abajo": "Large + 2 below", "Doble pantalla": "Dual screen", "Giratoria": "Rotating", "principal": "main", "Imagen": "Image", "Imagen de prueba (medidas y proporción)": "Test image (size and ratio)", "Escena retro (pixel art)": "Retro scene (pixel art)", "Mi captura": "My screenshot", "Subir captura propia": "Upload own screenshot", "Tipo de imagen": "Image type", "Prueba": "Test", "Escena retro": "Retro scene", "medidas y ratio": "size & ratio", "subir imagen": "upload image", "tu captura": "your screenshot", "Ajuste de la imagen": "Image fit", "Mantener proporción (bordes negros)": "Keep ratio (black bars)", "Mantener proporción": "Keep ratio", "Estirar (llena y deforma)": "Stretch (fills and distorts)", "Rellenar recortando": "Fill by cropping", "Estirar": "Stretch", "Recortar": "Crop", "llena y deforma": "fills and distorts", "llena y recorta": "fills and crops", "Nota: La escala real 1:1 requiere la versión de escritorio": "Note: real 1:1 scale requires the desktop version", "Mira tus consolas a tamaño real": "See your consoles at real size", "¿De cuántas pulgadas es tu pantalla?": "How many inches is your screen?", "pulgadas": "inches", "Más tarde": "Later", "Comparar": "Compare", "Por ratio": "By ratio", "Apilar centradas": "Stack centered", "Separar": "Separate", "Contornos": "Outlines", "Chasis": "Chassis", "Unidades": "Units", "Centímetros (cm)": "Centimeters (cm)", "Pulgadas (in)": "Inches (in)", "Compartir y exportar": "Share & export", "Descargar PNG": "Download PNG", "Copiar enlace": "Copy link", "Cargar": "Load", "Pegar enlace o código para cargar una comparación": "Paste a link or code to load a comparison", "Enlace o código de comparación": "Comparison link or code", "Comparación visual de pantallas a escala": "Scaled visual screen comparison", "↺ Recolocar todo": "↺ Reset positions", "Diagonal · tamaño real de la pantalla · área de juego": "Diagonal · real screen size · game area", "juego": "game", "Arrastra cualquier consola para moverla: se imanta a bordes y centros (Alt: sin imán) · doble clic: recolocar · flechas: ajuste fino": "Drag any console to move it: it snaps to edges and centers (Alt: no snap) · double-click: reset · arrows: fine adjustment", "· línea continua: área de juego · discontinua: pantalla · punteada: chasis": "· solid line: game area · dashed: screen · dotted: chassis", "Orden: ratio": "Sort: ratio", "Orden: uso": "Sort: usage", "Deformación": "Distortion", "ninguna": "none", "ninguno": "none", "Recorte": "Crop", "Pantalla usada": "Screen used", "Bordes negros": "Black bars", "Escala entera": "Integer scale", "Juego en pantalla": "Game on screen", "Aplicar este ratio y volver a Comparar": "Apply this ratio and go back to Compare", "ocupa": "fills", "no cabe a 1×": "doesn't fit at 1×", "Ordenadas de mayor a menor tamaño del juego en pantalla. ▲ = mejor valor entre las consolas.": "Sorted from largest to smallest on-screen game size. ▲ = best value among the consoles.", "Arrastra cualquier consola para moverla: se imanta a bordes y centros (Alt: sin imán)": "Drag any console to move it: it snaps to edges and centers (Alt: no snap)", "doble clic: recolocar": "double-click: reset", "flechas: ajuste fino": "arrow keys: fine adjustment", "línea continua: área de juego": "solid line: game area", "discontinua: pantalla": "dashed: screen", "punteada: chasis": "dotted: chassis", "Disposición:": "Layout:", "Apoya el proyecto": "Support the project", "Contenido:": "Content:", "mejor valor entre las consolas comparadas.": "best value among the compared consoles.", "Contenido": "Content", "Escalado": "Scaling", "Ordenadas de mayor a menor tamaño del juego en pantalla": "Sorted from largest to smallest on-screen game size", "▲ = mejor valor entre las consolas": "▲ = best value among the consoles", "Pantalla (negro) con la imagen del juego (color)": "Screen (black) with the game image (color)", "cm de diagonal": "cm diagonal", "sin bordes negros": "no black bars", "bordes negros": "black bars", "Mayor": "Largest", "Mayor tamaño de juego en pantalla": "Largest on-screen game size", "Frente a la mejor consola": "Compared with the best console", "Parte de la pantalla que ocupa la imagen": "Share of the screen the image occupies", "Sobre el chasis": "Screen vs chassis", "Superficie de pantalla frente a la del chasis": "Screen area relative to the chassis", "Mayor múltiplo exacto de la resolución original que cabe": "Largest exact multiple of the native resolution that fits", "sin datos": "no data", "(abierta)": "(open)", "Tabla comparativa": "Comparison table", "Comparativa de pantallas": "Screen comparison", "¿Qué significa cada dato?": "What does each value mean?", "Juego en pantalla:": "Game on screen:", "diagonal real de la imagen del juego una vez colocada en la pantalla. La barra la compara con la mejor.": "actual diagonal of the game image once placed on the screen. The bar compares it with the best.", "Pantalla usada:": "Screen used:", "parte de la pantalla que ocupa la imagen; el resto son bordes negros.": "part of the screen the image occupies; the rest is black bars.", "Sobre el chasis:": "Screen vs chassis:", "superficie de pantalla frente a la del chasis completo (abierto en las dual-screen).": "screen area relative to the full chassis (open on dual-screen models).", "Escala entera:": "Integer scale:", "mayor múltiplo exacto de la resolución original que cabe en la pantalla (píxeles nítidos) y % de pantalla que ocupa.": "largest exact multiple of the native resolution that fits on the screen (sharp pixels) and the % of the screen it fills.", "mejor valor entre las consolas comparadas": "best value among the compared consoles", "Calibrar escala 1:1": "Calibrate 1:1 scale", "Paso 1: elige la diagonal de tu pantalla. Paso 2 (opcional): afina con un objeto real hasta que el rectángulo mida lo mismo.": "Step 1: choose your screen's diagonal. Step 2 (optional): fine-tune with a real object until the rectangle matches its size.", "1 · Diagonal de tu pantalla": "1 · Your screen's diagonal", "2 · Ajuste fino (opcional)": "2 · Fine-tuning (optional)", "Tarjeta de crédito 8,56 × 5,40 cm": "Credit card 8.56 × 5.40 cm", "Carta Magic / Pokémon 6,35 × 8,89 cm": "Magic / Pokémon card 6.35 × 8.89 cm", "Moneda 2 € · Ø 2,58 cm": "2 € coin · Ø 2.58 cm", "Tarjeta de crédito": "Credit card", "Carta Magic / Pokémon": "Magic / Pokémon card", "Moneda 2 €": "2 € coin", "Dejar este objeto visible en la comparación": "Keep this object visible in the comparison", "Cancelar": "Cancel", "Aplicar": "Apply", "Reducir": "Decrease", "Aumentar": "Increase", "Escala en píxeles por centímetro": "Scale in pixels per centimeter", "Móvil 6.1": "Phone 6.1", "Móvil 6,1": "Phone 6.1", "13,3": "13.3", "15,6": "15.6", "17,3": "17.3", "Archivo guardado.": "File saved.", "Descarga cancelada.": "Download cancelled.", "No se pudo guardar el archivo.": "Couldn't save the file.", "Archivo descargado.": "File downloaded.", "No se pudo descargar el archivo.": "Couldn't download the file.", "Enlace copiado. Si no abre la comparación, pégalo en «Cargar».": "Link copied. If it doesn't open the comparison, paste it into “Load”.", "Selecciona y copia el enlace del cuadro de abajo.": "Select and copy the link from the box below.", "Comparación cargada.": "Comparison loaded.", "Enlace o código no válido.": "Invalid link or code.", "Pega primero un enlace o código.": "Paste a link or code first.", "Generando imagen…": "Generating image…", "No se pudo generar la imagen en este entorno.": "Couldn't generate the image in this environment.", "pixel nativo": "native pixel", "sup.": "top", "inf.": "bottom", "Sega / Atari / Otras": "Sega / Atari / Others", "Otras / Budget": "Others / Budget", "PC / Otras Dual": "PC / Other dual", "Switch (con Joy-Con)": "Switch (with Joy-Con)", "Diagonal (\")": "Diagonal (\")", "Manual": "Manual", "Dual": "Dual", "Auto": "Auto", "Arcade vertical (240×320)": "Vertical arcade (240×320)", "SNES / NES pixel nativo": "SNES / NES native pixel", "PRINCIPAL": "MAIN", "Medidas de chasis aproximadas": "Approximate chassis dimensions", "Anbernic RG35XX / Plus": "Anbernic RG35XX / Plus", "<1× (no cabe)": "<1× (doesn't fit)", "toca una para añadirla": "tap one to add it", "Tablet 11": "Tablet 11", "Arcade vertical": "Vertical arcade"};
-const I18R=[[/^(\d+) de (\d+) consolas$/,"$1 of $2 consoles"],[/^(.+) cm de diagonal$/,"$1 cm diagonal"],[/^bordes negros (.+)$/,"black bars $1"],[/^ocupa (.+)$/,"fills $1"],[/^Duplicar (.+)$/,(m,a)=>"Duplicate "+tr(a)],[/^Quitar (.+)$/,(m,a)=>"Remove "+tr(a)],[/^Tema (.+)$/,(m,a)=>"Theme "+tr(a)],[/^(.+) \(copia\)$/,(m,a)=>tr(a)+" (copy)"],[/^Tu pantalla: (.+)$/,"Your screen: $1"],[/^Resolución detectada: (.+)$/,"Detected resolution: $1"],[/^Escala ajustada a mano · (.+)$/,"Scale adjusted manually · $1"],[/^juego (.+)$/,"game $1"]];
+const I18N={"Creado por Charles Married":"Created by Charles Married","Ordenadas de mayor a menor tamaño del juego en pantalla.":"Sorted from largest to smallest on-screen game size.","Centrar":"Center","Colocar todas en vertical, centradas":"Place all in a vertical column, centered","Elige la diagonal de tu pantalla y, si quieres, afina con un objeto real.":"Choose your screen diagonal and, if you like, fine-tune with a real object.","Diagonal de tu pantalla":"Your screen diagonal","Ajuste fino":"Fine tuning","opcional":"optional","Activar / desactivar tamaño real (1:1)":"Toggle real size (1:1)","Marca":"Brand","Pulgadas":"Inches","Quitar filtros":"Clear filters","Otras":"Other","Vista": "View", "Escala": "Scale", "Usada": "Used", "Tabla": "Table", "Tarjetas": "Cards", "Ordenadas de mayor a menor tamaño del juego en pantalla. Más detalle en «Datos».": "Sorted from largest to smallest game size on screen. More detail in “Data”.", "Ver tarjetas": "Show cards", "Ocultar tarjetas": "Hide cards", "Datos": "Data", "Datos de la comparación": "Comparison data", "▲ = mejor valor entre las consolas.": "▲ = best value among the consoles.", "Añade consolas para ver sus datos.": "Add consoles to see their data.", "Las dos pantallas son OLED": "Both screens are OLED", "Panel IPS (LCD): buen ángulo de visión y colores estables": "IPS panel (LCD): wide viewing angles and stable colors", "Panel OLED: negros puros y contraste altísimo": "OLED panel: true blacks and very high contrast", "Panel AMOLED: negros puros, colores intensos y mucho brillo": "AMOLED panel: true blacks, vivid colors and high brightness", "LCD TFT clásico, sin la amplitud de ángulos de un IPS": "Classic TFT LCD, without the wide viewing angles of an IPS", "LCD STN monocromo reflectivo, sin retroiluminación": "Monochrome reflective STN LCD, no backlight", "Panel LCD (el fabricante no especifica el tipo exacto)": "LCD panel (the manufacturer does not specify the exact type)", "LCD con retroiluminación Mini-LED": "LCD with Mini-LED backlight", "LCD LTPS: panel de alta densidad y bajo consumo": "LTPS LCD: high-density, low-power panel", "Memory LCD de Sharp: 1 bit, reflectivo y de muy bajo consumo": "Sharp Memory LCD: 1-bit, reflective, very low power", "Pantalla principal OLED y secundaria IPS": "Main screen OLED, secondary screen IPS", "Las dos pantallas son AMOLED": "Both screens are AMOLED", "Panel": "Panel", "Apilar": "Stack", "Cerrar": "Close", "Ajuste": "Fit", "Sistema": "System", "Importar": "Import", "Importar comparación": "Import comparison", "Comparador de Pantallas Retro": "Retro Screen Comparator", "Compara pantallas, bordes negros y escalado entero de sistemas retro": "Compare retro console screens, black bars and integer scaling", "Compara pantallas y chasis de consolas retro y handhelds a tamaño físico real: proporciones, bordes negros y escalado entero.": "Compare retro console and handheld screens and chassis at true physical size: aspect ratios, black bars and integer scaling.", "Modo móvil": "Mobile mode", "Modo tablet": "Tablet mode", "Modo escritorio": "Desktop mode", "Tema": "Theme", "Escala real": "Real scale", "Mostrar a tamaño real (1:1)": "Show at real size (1:1)", "Cambiar pantalla o afinar": "Change screen or fine-tune", "Sin calibrar: elige tu pantalla para ver el tamaño real.": "Not calibrated: choose your screen to see real size.", "✓ Escalado automático activo": "✓ Automatic scaling on", "Escala real desactivada": "Real scale off", "Tu pantalla:": "Your screen:", "Escala ajustada a mano": "Scale adjusted manually", "Resolución detectada:": "Detected resolution:", "Añadir consola": "Add console", "Predefinida": "Preset", "Datos a mano": "Manual entry", "← Volver a la lista de consolas": "← Back to console list", "Nombre": "Name", "Mi pantalla": "My screen", "Pantalla": "Screen", "Relación": "Ratio", "Ancho (ratio)": "Width (ratio)", "Alto (ratio)": "Height (ratio)", "Resolución X": "Resolution X", "Resolución Y": "Resolution Y", "Chasis (opcional)": "Chassis (optional)", "Chasis ancho (cm)": "Chassis width (cm)", "Chasis alto (cm)": "Chassis height (cm)", "Formato de consola": "Console format", "Vertical (tipo Game Boy)": "Vertical (Game Boy style)", "Doble pantalla (Clamshell / DS)": "Dual screen (clamshell / DS)", "Giratoria (tipo RG Rotate)": "Rotating (RG Rotate style)", "Slider (tipo RG Slide)": "Slider (RG Slide style)", "En doble pantalla, el alto del chasis es el de la consola abierta.": "For dual screens, the chassis height is that of the open console.", "Pantalla inferior": "Bottom screen", "[+] Añadir a la comparación": "[+] Add to comparison", "Guardar cambios": "Save changes", "Limpiar todo": "Clear all", "Buscar consola": "Search console", "Buscar consola (ej. Nova, Thor, Duo, Rotate, OLED, 4:3)...": "Search console (e.g. Nova, Thor, Duo, Rotate, OLED, 4:3)...", "opcional": "optional", "Todas": "All", "Sin resultados": "No results", "Usar como base y editar a mano": "Use as a base and edit manually", "Editar": "Edit", "Duplicar y editar": "Duplicate and edit", "Duplicar": "Duplicate", "Quitar": "Remove", "(copia)": "(copy)", "Añade pantallas para compararlas →": "Add screens to compare them →", "Sistema retro": "Retro system", "Proporción X": "Ratio X", "Proporción Y": "Ratio Y", "Personalizado": "Custom", "Otra": "Other", "Doble pantalla · disposición": "Dual screen · layout", "Disposición en pantalla única": "Single-screen layout", "Automática (apilada o lado a lado)": "Automatic (stacked or side by side)", "Apilada (arriba/abajo)": "Stacked (top/bottom)", "Lado a lado (iguales)": "Side by side (equal)", "Grande + pequeña (Azahar «Large Screen»)": "Large + small (Azahar “Large Screen”)", "Híbrida: grande + 2 pequeñas a la derecha (melonDS)": "Hybrid: large + 2 small on the right (melonDS)", "Grande arriba + pequeña debajo": "Large on top + small below", "Grande arriba + 2 pequeñas debajo": "Large on top + 2 small below", "Pantalla principal": "Main screen", "Superior": "Top", "Inferior (táctil)": "Bottom (touch)", "superior": "top", "inferior (táctil)": "bottom (touch)", "Proporción grande : pequeña": "Large : small ratio", "Proporción grande y pequeña": "Large and small ratio", "1,5×": "1.5×", "2× (como NDS 512×384 + 256×192)": "2× (like NDS 512×384 + 256×192)", "4× (Azahar por defecto)": "4× (Azahar default)", "Doble pantalla · uso": "Dual screen · use", "Automático / Ambas": "Automatic / Both", "Solo superior": "Top only", "Solo inferior": "Bottom only", "Ambas": "Both", "Uso de pantalla dual": "Dual-screen use", "Disposición": "Layout", "Apilada": "Stacked", "Lado a lado": "Side by side", "Grande + pequeña": "Large + small", "Híbrida": "Hybrid", "Grande arriba": "Large on top", "Grande + 2 abajo": "Large + 2 below", "Doble pantalla": "Dual screen", "Giratoria": "Rotating", "principal": "main", "Imagen": "Image", "Imagen de prueba (medidas y proporción)": "Test image (size and ratio)", "Escena retro (pixel art)": "Retro scene (pixel art)", "Mi captura": "My screenshot", "Subir captura propia": "Upload own screenshot", "Tipo de imagen": "Image type", "Prueba": "Test", "Escena retro": "Retro scene", "medidas y ratio": "size & ratio", "subir imagen": "upload image", "tu captura": "your screenshot", "Ajuste de la imagen": "Image fit", "Mantener proporción (bordes negros)": "Keep ratio (black bars)", "Mantener proporción": "Keep ratio", "Estirar (llena y deforma)": "Stretch (fills and distorts)", "Rellenar recortando": "Fill by cropping", "Estirar": "Stretch", "Recortar": "Crop", "llena y deforma": "fills and distorts", "llena y recorta": "fills and crops", "Nota: La escala real 1:1 requiere la versión de escritorio": "Note: real 1:1 scale requires the desktop version", "Mira tus consolas a tamaño real": "See your consoles at real size", "¿De cuántas pulgadas es tu pantalla?": "How many inches is your screen?", "pulgadas": "inches", "Más tarde": "Later", "Comparar": "Compare", "Por ratio": "By ratio", "Apilar centradas": "Stack centered", "Separar": "Separate", "Contornos": "Outlines", "Chasis": "Chassis", "Unidades": "Units", "Centímetros (cm)": "Centimeters (cm)", "Pulgadas (in)": "Inches (in)", "Compartir y exportar": "Share & export", "Descargar PNG": "Download PNG", "Copiar enlace": "Copy link", "Cargar": "Load", "Pegar enlace o código para cargar una comparación": "Paste a link or code to load a comparison", "Enlace o código de comparación": "Comparison link or code", "Comparación visual de pantallas a escala": "Scaled visual screen comparison", "↺ Recolocar todo": "↺ Reset positions", "Diagonal · tamaño real de la pantalla · área de juego": "Diagonal · real screen size · game area", "juego": "game", "Arrastra cualquier consola para moverla: se imanta a bordes y centros (Alt: sin imán) · doble clic: recolocar · flechas: ajuste fino": "Drag any console to move it: it snaps to edges and centers (Alt: no snap) · double-click: reset · arrows: fine adjustment", "· línea continua: área de juego · discontinua: pantalla · punteada: chasis": "· solid line: game area · dashed: screen · dotted: chassis", "Orden: ratio": "Sort: ratio", "Orden: uso": "Sort: usage", "Deformación": "Distortion", "ninguna": "none", "ninguno": "none", "Recorte": "Crop", "Pantalla usada": "Screen used", "Bordes negros": "Black bars", "Escala entera": "Integer scale", "Juego en pantalla": "Game on screen", "Aplicar este ratio y volver a Comparar": "Apply this ratio and go back to Compare", "ocupa": "fills", "no cabe a 1×": "doesn't fit at 1×", "Ordenadas de mayor a menor tamaño del juego en pantalla. ▲ = mejor valor entre las consolas.": "Sorted from largest to smallest on-screen game size. ▲ = best value among the consoles.", "Arrastra cualquier consola para moverla: se imanta a bordes y centros (Alt: sin imán)": "Drag any console to move it: it snaps to edges and centers (Alt: no snap)", "doble clic: recolocar": "double-click: reset", "flechas: ajuste fino": "arrow keys: fine adjustment", "línea continua: área de juego": "solid line: game area", "discontinua: pantalla": "dashed: screen", "punteada: chasis": "dotted: chassis", "Disposición:": "Layout:", "Apoya el proyecto": "Support the project", "Añadir": "Add", "Añadir a la comparación": "Add to comparison", "Tamaño real": "Real size", "Acerca tu consola a la pantalla para comparar": "Hold your console up to the screen to compare", "Contenido:": "Content:", "mejor valor entre las consolas comparadas.": "best value among the compared consoles.", "Contenido": "Content", "Escalado": "Scaling", "Ordenadas de mayor a menor tamaño del juego en pantalla": "Sorted from largest to smallest on-screen game size", "▲ = mejor valor entre las consolas": "▲ = best value among the consoles", "Pantalla (negro) con la imagen del juego (color)": "Screen (black) with the game image (color)", "cm de diagonal": "cm diagonal", "sin bordes negros": "no black bars", "bordes negros": "black bars", "Mayor": "Largest", "Mayor tamaño de juego en pantalla": "Largest on-screen game size", "Frente a la mejor consola": "Compared with the best console", "Parte de la pantalla que ocupa la imagen": "Share of the screen the image occupies", "Sobre el chasis": "Screen vs chassis", "Superficie de pantalla frente a la del chasis": "Screen area relative to the chassis", "Mayor múltiplo exacto de la resolución original que cabe": "Largest exact multiple of the native resolution that fits", "sin datos": "no data", "(abierta)": "(open)", "Tabla comparativa": "Comparison table", "Comparativa de pantallas": "Screen comparison", "¿Qué significa cada dato?": "What does each value mean?", "Juego en pantalla:": "Game on screen:", "diagonal real de la imagen del juego una vez colocada en la pantalla. La barra la compara con la mejor.": "actual diagonal of the game image once placed on the screen. The bar compares it with the best.", "Pantalla usada:": "Screen used:", "parte de la pantalla que ocupa la imagen; el resto son bordes negros.": "part of the screen the image occupies; the rest is black bars.", "Sobre el chasis:": "Screen vs chassis:", "superficie de pantalla frente a la del chasis completo (abierto en las dual-screen).": "screen area relative to the full chassis (open on dual-screen models).", "Escala entera:": "Integer scale:", "mayor múltiplo exacto de la resolución original que cabe en la pantalla (píxeles nítidos) y % de pantalla que ocupa.": "largest exact multiple of the native resolution that fits on the screen (sharp pixels) and the % of the screen it fills.", "mejor valor entre las consolas comparadas": "best value among the compared consoles", "Calibrar escala 1:1": "Calibrate 1:1 scale", "Paso 1: elige la diagonal de tu pantalla. Paso 2 (opcional): afina con un objeto real hasta que el rectángulo mida lo mismo.": "Step 1: choose your screen's diagonal. Step 2 (optional): fine-tune with a real object until the rectangle matches its size.", "1 · Diagonal de tu pantalla": "1 · Your screen's diagonal", "2 · Ajuste fino (opcional)": "2 · Fine-tuning (optional)", "Tarjeta de crédito 8,56 × 5,40 cm": "Credit card 8.56 × 5.40 cm", "Carta Magic / Pokémon 6,35 × 8,89 cm": "Magic / Pokémon card 6.35 × 8.89 cm", "Moneda 2 € · Ø 2,58 cm": "2 € coin · Ø 2.58 cm", "Tarjeta de crédito": "Credit card", "Carta Magic / Pokémon": "Magic / Pokémon card", "Moneda 2 €": "2 € coin", "Dejar este objeto visible en la comparación": "Keep this object visible in the comparison", "Cancelar": "Cancel", "Aplicar": "Apply", "Reducir": "Decrease", "Aumentar": "Increase", "Escala en píxeles por centímetro": "Scale in pixels per centimeter", "Móvil 6.1": "Phone 6.1", "Móvil 6,1": "Phone 6.1", "13,3": "13.3", "15,6": "15.6", "17,3": "17.3", "Archivo guardado.": "File saved.", "Descarga cancelada.": "Download cancelled.", "No se pudo guardar el archivo.": "Couldn't save the file.", "Archivo descargado.": "File downloaded.", "No se pudo descargar el archivo.": "Couldn't download the file.", "Enlace copiado. Si no abre la comparación, pégalo en «Cargar».": "Link copied. If it doesn't open the comparison, paste it into “Load”.", "Selecciona y copia el enlace del cuadro de abajo.": "Select and copy the link from the box below.", "Comparación cargada.": "Comparison loaded.", "Enlace o código no válido.": "Invalid link or code.", "Pega primero un enlace o código.": "Paste a link or code first.", "Generando imagen…": "Generating image…", "No se pudo generar la imagen en este entorno.": "Couldn't generate the image in this environment.", "pixel nativo": "native pixel", "sup.": "top", "inf.": "bottom", "Sega / Atari / Otras": "Sega / Atari / Others", "Otras / Budget": "Others / Budget", "PC / Otras Dual": "PC / Other dual", "Switch (con Joy-Con)": "Switch (with Joy-Con)", "Diagonal (\")": "Diagonal (\")", "Manual": "Manual", "Dual": "Dual", "Auto": "Auto", "Arcade vertical (240×320)": "Vertical arcade (240×320)", "SNES / NES pixel nativo": "SNES / NES native pixel", "PRINCIPAL": "MAIN", "Medidas de chasis aproximadas": "Approximate chassis dimensions", "Anbernic RG35XX / Plus": "Anbernic RG35XX / Plus", "<1× (no cabe)": "<1× (doesn't fit)", "toca una para añadirla": "tap one to add it", "Tablet 11": "Tablet 11", "Arcade vertical": "Vertical arcade"};
+const I18R=[[/^Pantalla \((cm|in)\)$/,"Screen ($1)"],[/^(\d+) de (\d+) consolas$/,"$1 of $2 consoles"],[/^(.+) cm de diagonal$/,"$1 cm diagonal"],[/^bordes negros (.+)$/,"black bars $1"],[/^ocupa (.+)$/,"fills $1"],[/^Duplicar (.+)$/,(m,a)=>"Duplicate "+tr(a)],[/^Quitar (.+)$/,(m,a)=>"Remove "+tr(a)],[/^Tema (.+)$/,(m,a)=>"Theme "+tr(a)],[/^(.+) \(copia\)$/,(m,a)=>tr(a)+" (copy)"],[/^Tu pantalla: (.+)$/,"Your screen: $1"],[/^Resolución detectada: (.+)$/,"Detected resolution: $1"],[/^Escala ajustada a mano · (.+)$/,"Scale adjusted manually · $1"],[/^juego (.+)$/,"game $1"]];
 function tr(s){if(LANG==="es"||typeof s!=="string")return s;const m=s.match(/^(\s*)([\s\S]*?)(\s*)$/),c=m[2];if(!c)return s;let r=I18N[c];if(r==null){for(const q of I18R){if(q[0].test(c)){r=c.replace(q[0],q[1]);break}}}
  if(r==null&&c.includes(" · ")){const a=c.split(" · "),b=a.map(x=>tr(x));if(b.some((x,i)=>x!==a[i]))r=b.join(" · ")}
  return m[1]+(r==null?c:r)+m[3]}
@@ -283,7 +518,7 @@ const T=tr;
 const $=id=>document.getElementById(id);
 const VIS=[];
 function syncVis(){VIS.forEach(([sel,box])=>{box.classList.toggle("off",!!sel.disabled);box.querySelectorAll(".vt").forEach(b=>{const on=b.dataset.v===sel.value;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)})})}
-const PAL={light:["#0891b2","#ea580c","#4d7c0f","#b45309","#7c3aed","#db2777","#047857","#2563eb"],studio:["#22d3ee","#ff5722","#a3e635","#f59e0b","#a78bfa","#f472b6","#34d399","#60a5fa"]};let COLORS=PAL.studio;
+const PAL={light:["#0f5f78","#a8370a","#3f6212","#92400e","#6d28d9","#a91650","#046a4b","#1d4ed8"],studio:["#3cc4dc","#ff5722","#9fd94a","#f0a020","#a28ef0","#ee7fb2","#40c996","#6ba6ee"]};let COLORS=PAL.studio;
 const PRESETS=[
 ["Game Boy (DMG)",2.6,10,9,160,144,9,14.8,"v",0,"Nintendo"],["Game Boy Pocket",2.5,10,9,160,144,7.6,12.7,"v",0,"Nintendo"],["Game Boy Color",2.3,10,9,160,144,7.5,13.3,"v",0,"Nintendo"],["Game Boy Advance",2.9,3,2,240,160,14.45,8.2,"h",0,"Nintendo"],["Game Boy Micro",2,3,2,240,160,10.1,5,"h",0,"Nintendo"],["Switch Lite",5.5,16,9,1280,720,20.8,9.1,"h",0,"Nintendo"],["Switch (con Joy-Con)",6.2,16,9,1280,720,23.9,10.2,"h",0,"Nintendo"],["Switch OLED",7,16,9,1280,720,24.2,10.2,"h",0,"Nintendo"],["Switch 2",7.9,16,9,1920,1080,27.2,11.6,"h",0,"Nintendo"],["Wii U GamePad",6.2,16,9,854,480,25.5,13.5,"h",1,"Nintendo"],
 ["PSP (1000)",4.3,16,9,480,272,17,7.4,"h",0,"Sony"],["PS Vita (1000 OLED)",5,16,9,960,544,18.2,8.4,"h",0,"Sony"],
@@ -341,11 +576,15 @@ const PRESETS=[
 ["GKD Pixel 2", 2.4, 4, 3, 640, 480, 6.3, 8.1, "v", 0, "Otras / Budget", null],
 ["MagicX One 35", 3.5, 3, 2, 960, 640, 15.3, 7.0, "h", 0, "Otras / Budget", null],
 ["Mangmi Air X", 5.5, 16, 9, 1920, 1080, 20.35, 8.74, "h", 0, "Otras / Budget", null],
-["Anbernic RG Vita",5.46,16,9,1280,720,0,0,"h",0,"Anbernic"],["Anbernic RG Vita Pro",5.5,16,9,1920,1080,0,0,"h",0,"Anbernic"],["Mangmi Pocket Max",7,16,9,1920,1080,0,0,"h",0,"Otras / Budget"]];
+["Anbernic RG Vita",5.46,16,9,1280,720,20.6,8.4,"h",0,"Anbernic"],["Anbernic RG Vita Pro",5.5,16,9,1920,1080,20.6,8.4,"h",0,"Anbernic"],["Mangmi Pocket Max",7,16,9,1920,1080,25.5,10.1,"h",0,"Otras / Budget"]];
+const LAYS={"PSP (1000)": "one", "MagicX One 35": "one", "Mangmi Air X": "vita", "Mangmi Pocket Max": "vita", "TrimUI Smart Pro / Pro S": "sw", "Powkiddy RGB20SX": "one", "Powkiddy X55": "vita", "Powkiddy RGB10MAX3": "vita", "AYANEO Pocket DMG": "dmg", "Game Boy Advance": "cls", "Game Boy Micro": "cls", "Game Gear": "cls", "Atari Lynx": "cls", "Analogue Pocket": "cls", "Anbernic RG34XX": "cls", "Miyoo A30": "cls", "TrimUI Smart": "cls", "Switch Lite": "sw", "Switch (con Joy-Con)": "sw", "Switch OLED": "sw", "Switch 2": "sw", "Wii U GamePad": "sw", "Steam Deck LCD": "sw", "Steam Deck OLED": "sw", "AYN Odin 2 Mini": "sw", "AYN Odin 2": "sw", "AYN Odin 2 Portal": "sw", "AYN Odin 3": "sw", "Retroid Pocket 5": "vita", "Retroid Pocket 6": "vita", "Retroid Pocket G2": "vita", "Retroid Pocket 4 / 4 Pro": "vita", "Anbernic RG556": "sw", "Anbernic RG557": "sw", "Anbernic RG55G1": "sw", "AYANEO Pocket S": "sw", "AYANEO Pocket AIR": "sw", "AYANEO Pocket EVO": "sw", "ROG Ally / Ally X": "sw", "Lenovo Legion Go": "sw", "MSI Claw": "sw", "PS Vita (1000 OLED)": "vita", "PS Vita (2000 Slim)": "vita", "Anbernic RG Vita": "vita", "Anbernic RG Vita Pro": "vita", "Anbernic RG353M": "vita", "Anbernic RG405M": "vita", "Anbernic RG406H": "vita", "Anbernic RG477M": "vita", "Anbernic RG476H": "vita", "Anbernic RG505": "vita", "Retroid Pocket Classic": "gb2", "Retroid Pocket Duo": "duo", "Nintendo DS Lite": "nds", "Nintendo DSi XL": "nds", "New Nintendo 3DS XL": "n3ds", "New Nintendo 2DS XL": "n3ds", "Anbernic RG35XX H": "vita", "Anbernic RG40XX H": "vita", "Anbernic RG Cube": "vita", "Anbernic RG CubeXX": "vita", "Anbernic RG Slide": "vita"};
+const FS={"Game Gear": [2, 0], "Atari Lynx": [2, 0], "WonderSwan": [2, 0], "Analogue Pocket": [4, 0], "Playdate": [2, 0], "R36S": [4, 2], "GKD Pixel": [4, 0], "GKD Pixel 2": [4, 0], "Mangmi Air X": [4, 2], "Mangmi Pocket Max": [4, 2], "PS Vita (1000 OLED)": [4, 2], "PS Vita (2000 Slim)": [4, 2], "MSI Claw": [4, 2], "ROG Ally / Ally X": [4, 2], "Lenovo Legion Go": [4, 2], "TrimUI Brick": [4, 0], "TrimUI Brick Pro": [4, 2], "TrimUI Smart Pro / Pro S": [4, 2], "TrimUI Smart": [4, 0], "Miyoo Mini v4": [4, 0], "Miyoo A30": [4, 0], "Miyoo Flip": [4, 0], "Powkiddy V10": [4, 0], "Powkiddy RGB20SX": [4, 2], "Powkiddy X55": [4, 2], "Powkiddy RGB10MAX3": [4, 2], "AYANEO Pocket DMG": [4, 2], "AYANEO Pocket Micro": [4, 2], "Game Boy Advance": [2, 0], "Game Boy Micro": [2, 0], "Game Boy Advance SP": [2, 0], "Retroid Pocket 2S": [4, 2], "Retroid Pocket 3+": [4, 2], "Retroid Pocket 4 / 4 Pro": [4, 2], "Retroid Pocket 5": [4, 2], "Retroid Pocket G2": [4, 2], "Retroid Pocket 6": [4, 2], "Retroid Pocket Mini": [4, 2], "Retroid Pocket Nova": [4, 2], "Retroid Pocket Duo": [4, 2], "Retroid Pocket Flip": [4, 2], "Retroid Pocket Flip 2": [4, 2], "Retroid Pocket Classic": [4, 0], "Anbernic RG35XX / Plus": [4, 0], "Anbernic RG35XX Pro": [4, 2], "Anbernic RG35XX H": [4, 2], "Anbernic RG40XX H": [4, 2], "Anbernic RG40XX V": [4, 2], "Anbernic RG405M": [4, 2], "Anbernic RG406H": [4, 2], "Anbernic RG406V": [4, 2], "Anbernic RG405V": [4, 2], "Anbernic RG353M": [4, 2], "Anbernic RG353V": [4, 2], "Anbernic RG Cube": [4, 2], "Anbernic RG CubeXX": [4, 2], "Anbernic RG477M": [4, 2], "Anbernic RG477V": [4, 2], "Anbernic RG505": [4, 2], "Anbernic RG556": [4, 2], "Anbernic RG557": [4, 2], "Anbernic RG55G1": [4, 2], "Anbernic RG476H": [4, 2], "Anbernic RG34XX": [4, 0], "Anbernic RG34XX SP": [4, 0], "Anbernic RG35XX SP": [4, 0], "Anbernic RG28XX": [4, 0], "Anbernic RG Rotate": [4, 0], "Anbernic RG Slide": [4, 2], "Anbernic RG Vita": [4, 2], "Anbernic RG Vita Pro": [4, 2]};
+const CLAMS=["Anbernic RG35XX SP","Anbernic RG34XX SP","Game Boy Advance SP","Retroid Pocket Flip","Retroid Pocket Flip 2","Miyoo Flip"];
+const PNL={"Steam Deck LCD":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"ROG Ally / Ally X":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Lenovo Legion Go":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"MSI Claw":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG35XX / Plus":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG35XX Pro":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG35XX H":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG40XX H":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG40XX V":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG405M":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG406H":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG Cube":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG477M":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG477V":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG476H":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG406V":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG34XX":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG CubeXX":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG28XX":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Retroid Pocket 2S":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Retroid Pocket 3+":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Retroid Pocket 4 / 4 Pro":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Retroid Pocket Flip":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"AYN Odin 2":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"AYN Loki / Loki Max":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"TrimUI Brick":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"TrimUI Brick Pro":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"TrimUI Smart Pro / Pro S":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Miyoo Mini Plus":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Miyoo Mini v4":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Miyoo A30":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Miyoo Flip":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Powkiddy RGB30":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Powkiddy X55":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Powkiddy RGB10MAX3":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG Rotate":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG Slide":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG35XX SP":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG34XX SP":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG ARC-S / ARC-D":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG405V":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG353V":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG353M":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG Nano":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"PS Vita (2000 Slim)":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"R36S":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Mangmi Air X":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG Vita":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"MagicX One 35":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Switch OLED":["OLED","Panel OLED: negros puros y contraste altísimo"],"PS Vita (1000 OLED)":["OLED","Panel OLED: negros puros y contraste altísimo"],"Steam Deck OLED":["OLED","Panel OLED: negros puros y contraste altísimo"],"Anbernic RG505":["OLED","Panel OLED: negros puros y contraste altísimo"],"AYN Odin 2 Portal":["OLED","Panel OLED: negros puros y contraste altísimo"],"Anbernic RG556":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"Anbernic RG557":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"Anbernic RG Vita Pro":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Retroid Pocket 5":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"Retroid Pocket G2":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"Retroid Pocket 6":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"Retroid Pocket Mini":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"Retroid Pocket Classic":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"Retroid Pocket Nova":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"Retroid Pocket Flip 2":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"AYN Odin 3":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"AYANEO Pocket ACE":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"AYANEO Pocket DMG":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"AYANEO Pocket AIR":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"AYANEO Pocket EVO":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"Mangmi Pocket Max":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"Retroid Pocket Duo":["AMOLED","Panel AMOLED: negros puros, colores intensos y mucho brillo"],"Game Boy Color":["TFT","LCD TFT clásico, sin la amplitud de ángulos de un IPS"],"Game Boy Advance":["TFT","LCD TFT clásico, sin la amplitud de ángulos de un IPS"],"Game Boy Advance SP":["TFT","LCD TFT clásico, sin la amplitud de ángulos de un IPS"],"Game Boy Micro":["TFT","LCD TFT clásico, sin la amplitud de ángulos de un IPS"],"PSP (1000)":["TFT","LCD TFT clásico, sin la amplitud de ángulos de un IPS"],"Game Gear":["TFT","LCD TFT clásico, sin la amplitud de ángulos de un IPS"],"Nintendo DS Lite":["TFT","LCD TFT clásico, sin la amplitud de ángulos de un IPS"],"Nintendo DSi XL":["TFT","LCD TFT clásico, sin la amplitud de ángulos de un IPS"],"New Nintendo 3DS XL":["TFT","LCD TFT clásico, sin la amplitud de ángulos de un IPS"],"New Nintendo 2DS XL":["TFT","LCD TFT clásico, sin la amplitud de ángulos de un IPS"],"Game Boy (DMG)":["STN","LCD STN monocromo reflectivo, sin retroiluminación"],"Game Boy Pocket":["STN","LCD STN monocromo reflectivo, sin retroiluminación"],"WonderSwan":["STN","LCD STN monocromo reflectivo, sin retroiluminación"],"Switch Lite":["LCD","Panel LCD (el fabricante no especifica el tipo exacto)"],"Switch (con Joy-Con)":["LCD","Panel LCD (el fabricante no especifica el tipo exacto)"],"Switch 2":["LCD","Panel LCD (el fabricante no especifica el tipo exacto)"],"Wii U GamePad":["LCD","Panel LCD (el fabricante no especifica el tipo exacto)"],"Atari Lynx":["LCD","Panel LCD (el fabricante no especifica el tipo exacto)"],"AYN Odin 2 Mini":["Mini-LED","LCD con retroiluminación Mini-LED"],"Analogue Pocket":["LTPS","LCD LTPS: panel de alta densidad y bajo consumo"],"Playdate":["Memory LCD","Memory LCD de Sharp: 1 bit, reflectivo y de muy bajo consumo"],"AYANEO Pocket DS":["OLED + IPS","Pantalla principal OLED y secundaria IPS"],"AYN Thor / Thor Lite":["AMOLED ×2","Las dos pantallas son AMOLED"],"Anbernic RG DS":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Anbernic RG DS Plus":["LCD","Panel LCD (el fabricante no especifica el tipo exacto)"],"Anbernic RG DDS":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"AYANEO Flip DS":["OLED + IPS","Pantalla principal OLED y secundaria IPS"],"OneXSugar Sugar 1":["OLED ×2","Las dos pantallas son OLED"],"GKD Pixel 2":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"AYANEO Pocket Micro":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"AYANEO Pocket S":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"TrimUI Smart":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Powkiddy RGB20SX":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"],"Powkiddy V10":["IPS","Panel IPS (LCD): buen ángulo de visión y colores estables"]};const pnT=n=>{const e=PNL[n];return e?`<span class="pn" title="${e[1]}">${e[0]}</span>`:""};
 const ARS=[["4:3",4,3],["16:9",16,9],["3:2",3,2],["1:1",1,1],["16:10",16,10],["10:9",10,9],["8:7",8,7],["5:4",5,4]];
-const SYS={"4:3":{n:"4:3 · PS1, N64, SNES, Mega Drive, Arcade",w:4,h:3,nw:320,nh:240},"3:2":{n:"3:2 · Game Boy Advance",w:3,h:2,nw:240,nh:160},"10:9":{n:"10:9 · Game Boy / GBC",w:10,h:9,nw:160,nh:144},"16:9":{n:"16:9 · PSP, PS2 Wide, Switch",w:16,h:9,nw:480,nh:272},"8:7":{n:"8:7 · SNES / NES pixel nativo",w:8,h:7,nw:256,nh:224},"1:1":{n:"1:1 · PICO-8 / Game Boy / NeoGeo Pocket",w:1,h:1,nw:128,nh:128},"10:7":{n:"10:7 · Neo Geo MVS/AES (320×224)",w:10,h:7,nw:320,nh:224},"12:7":{n:"12:7 · Arcade CPS-1/2 (384×224)",w:12,h:7,nw:384,nh:224},"14:9":{n:"14:9 · WonderSwan (224×144)",w:14,h:9,nw:224,nh:144},"16:10":{n:"16:10 · PC / Steam Deck (1280×800)",w:16,h:10,nw:1280,nh:800},"3:4":{n:"3:4 · Arcade vertical (240×320)",w:3,h:4,nw:240,nh:320},"custom":{n:"Personalizado",w:4,h:3,nw:320,nh:240},"nds":{n:"NDS · Dual Screen (4:3 + 4:3 · 256×192 ×2)",w:4,h:3,nw:256,nh:192,dual:true,w2:4,h2:3,nw2:256,nh2:192},"3ds":{n:"3DS · Dual Screen (5:3 sup. + 4:3 inf.)",w:5,h:3,nw:400,nh:240,dual:true,w2:4,h2:3,nw2:320,nh2:240}};
+const SYS={"4:3":{n:"4:3 · PS1, N64, SNES, Mega Drive, Arcade",w:4,h:3,nw:320,nh:240},"3:2":{n:"3:2 · Game Boy Advance",w:3,h:2,nw:240,nh:160},"10:9":{n:"10:9 · Game Boy / GBC",w:10,h:9,nw:160,nh:144},"16:9":{n:"16:9 · PSP, PS2 Wide, Switch",w:16,h:9,nw:480,nh:272},"8:7":{n:"8:7 · SNES / NES pixel nativo",w:8,h:7,nw:256,nh:224},"1:1":{n:"1:1 · PICO-8 / NeoGeo Pocket",w:1,h:1,nw:128,nh:128},"10:7":{n:"10:7 · Neo Geo MVS/AES (320×224)",w:10,h:7,nw:320,nh:224},"12:7":{n:"12:7 · Arcade CPS-1/2 (384×224)",w:12,h:7,nw:384,nh:224},"14:9":{n:"14:9 · WonderSwan (224×144)",w:14,h:9,nw:224,nh:144},"16:10":{n:"16:10 · PC / Steam Deck (1280×800)",w:16,h:10,nw:1280,nh:800},"3:4":{n:"3:4 · Arcade vertical (240×320)",w:3,h:4,nw:240,nh:320},"custom":{n:"Personalizado",w:4,h:3,nw:320,nh:240},"nds":{n:"NDS · Dual Screen (4:3 + 4:3 · 256×192 ×2)",w:4,h:3,nw:256,nh:192,dual:true,w2:4,h2:3,nw2:256,nh2:192},"3ds":{n:"3DS · Dual Screen (5:3 sup. + 4:3 inf.)",w:5,h:3,nw:400,nh:240,dual:true,w2:4,h2:3,nw2:320,nh2:240}};
 const pex=m=>[Math.min(...m.p.map(q=>q.x)),Math.min(...m.p.map(q=>q.y)),Math.max(...m.p.map(q=>q.x+q.w)),Math.max(...m.p.map(q=>q.y+q.h))];
-let LAY=null,DRG=null,stk=false,galMode=false,galId=0,galSort="r";
+let LAY=null,DRG=null,stk=false,colM=false,galMode=false,galId=0,galSort="r";
 let screens=[],upImg=null,cnt=0,editId=0,hl=0;
 ARS.forEach((a,i)=>$("arSel").add(new Option(a[0],i)));$("arSel").add(new Option("Otra","o"));
 Object.keys(SYS).forEach(k=>$("sys").add(new Option(SYS[k].n,k)));
@@ -356,19 +595,30 @@ function edit(s){editId=s.id;$("mMan").click();$("name").value=s.name;$("diag").
 function syncAr(){const i=ARS.findIndex(a=>a[1]==$("aw").value&&a[2]==$("ah").value);$("arSel").value=i<0?"o":i;syncVis()}
 $("fmt").onchange=showFmt;
 const addScr=p=>{screens.push({id:++cnt,name:p[0],d:p[1],aw:p[2],ah:p[3],rw:p[4],rh:p[5],bw:p[6],bh:p[7],fmt:p[8],ap:p[9],s2:p[11]?{d:p[11][0],aw:p[11][1],ah:p[11][2],rw:p[11][3],rh:p[11][4]}:null,c:COLORS[(cnt-1)%COLORS.length]})};
-const PILLS=["Todas","Dual-Screen","Anbernic","Retroid","AYN","AYANEO","Miyoo","TrimUI","Powkiddy","Nintendo","4:3","3:2","16:9","1:1"];let pill="Todas";
+const BRN=["Anbernic","AYANEO","AYN","Miyoo","Nintendo","Powkiddy","Retroid","Sony","TrimUI","PC","Otras"];
+const bk=p=>{const g=p[10]||"";if(g==="PC handhelds")return["PC"];if(g==="Miyoo / Powkiddy")return["Miyoo","Powkiddy"];return BRN.includes(g)?[g]:["Otras"]};
+const INB=[["≤3\"",0,3],["3–4\"",3,4],["4–5\"",4,5],["5–6\"",5,6],[">6\"",6,999]];
+const PNB=["IPS","OLED","AMOLED","TFT","STN","LCD"];
+const FGR=[["b","Marca",BRN],["r","Ratio",["4:3","3:2","16:9","16:10","10:9","1:1"]],["i","Pulgadas",INB.map(x=>x[0])],["p","Panel",PNB]];
+const SEL={b:new Set(),r:new Set(),i:new Set(),p:new Set()};
 const FMTN={h:"Horizontal",v:"Vertical",ds:"Dual-Screen",rot:"Giratoria rotating",sld:"Slider"};
 const rt=(a,b)=>`${+a.toFixed(2)}:${+b.toFixed(2)}`;
 const specTxt=p=>`${p[1]}" ${rt(p[2],p[3])}`+(p[11]?` + ${p[11][0]}" ${rt(p[11][1],p[11][2])}`:"");
-const matchPill=p=>{if(pill==="Todas")return true;if(pill==="Dual-Screen")return !!p[11];
- if(/^\d+:\d+$/.test(pill)){const[a,b]=pill.split(":").map(Number);return [[p[2],p[3]],p[11]?[p[11][1],p[11][2]]:null].some(r=>r&&r[0]*b===r[1]*a)}
- const t=pill.toLowerCase();return (p[10]||"").toLowerCase().includes(t)||p[0].toLowerCase().includes(t)};
+const pnk=p=>{const e=PNL[p[0]];if(!e)return[];const t=e[0].match(/[A-Za-z-]+/g)||[];const o=[];t.forEach(x=>{if(["IPS","OLED","AMOLED","TFT","STN"].includes(x))o.push(x);else if(["LCD","Mini-LED","LTPS","Memory"].includes(x))o.push("LCD")});return o};
+const matchPill=p=>{
+ if(SEL.b.size&&!bk(p).some(x=>SEL.b.has(x)))return false;
+ if(SEL.r.size&&![...SEL.r].some(v=>{const[a,b]=v.split(":").map(Number);return [[p[2],p[3]],p[11]?[p[11][1],p[11][2]]:null].some(r=>r&&r[0]*b===r[1]*a)}))return false;
+ if(SEL.i.size&&![...SEL.i].some(v=>{const x=INB.find(y=>y[0]===v);return p[1]>x[1]&&p[1]<=x[2]}))return false;
+ if(SEL.p.size&&!pnk(p).some(x=>SEL.p.has(x)))return false;
+ return true};
+const sortIdx=()=>PRESETS.map((p,i)=>i).sort((x,y)=>{const A=PRESETS[x],B=PRESETS[y],ka=BRN.indexOf(bk(A)[0]),kb=BRN.indexOf(bk(B)[0]);const oa=bk(A)[0]==="PC"||bk(A)[0]==="Otras"?100+ka:0,ob=bk(B)[0]==="PC"||bk(B)[0]==="Otras"?100+kb:0;if(oa!==ob)return oa-ob;if(!oa&&bk(A)[0]!==bk(B)[0])return bk(A)[0].localeCompare(bk(B)[0],"en",{sensitivity:"base"});return B[1]-A[1]||A[0].localeCompare(B[0])});
 function buildList(){const q=$("searchPre").value.toLowerCase().trim().split(/\s+/).filter(Boolean),L=$("rsl");L.innerHTML="";let n=0;
- PRESETS.forEach((p,i)=>{if(!matchPill(p))return;const hay=(p[0]+" "+(p[10]||"")+" "+specTxt(p)+" "+FMTN[p[8]]).toLowerCase();if(!q.every(t=>hay.includes(t)))return;n++;
-  const r=document.createElement("div");r.className="ri";r.setAttribute("role","button");r.tabIndex=0;r.innerHTML=`${fi(true,p[8])}<div class="t"><b>${p[0]}${p[9]?" ≈":""}</b><small>${p[10]||""} · ${specTxt(p)}${p[6]?" · "+p[6]+"×"+p[7]+" cm":""}</small></div><span class="ed" title="Usar como base y editar a mano">Editar</span>`;
-  r.onclick=e=>{if(e.target.closest(".ed")){fillPreset(i);$("mMan").click();return}addScr(p);render();if(matchMedia("(max-width:900px)").matches)$("stage").scrollIntoView({behavior:"smooth",block:"center"})};L.append(r)});
- if(!n)L.innerHTML='<div class="hint" style="padding:10px">Sin resultados</div>';$("rsc").textContent=n+" de "+PRESETS.length+" consolas · toca una para añadirla"}
-function initSearch(){PILLS.forEach(t=>{const b=document.createElement("button");b.className="pill"+(t===pill?" on":"");b.dataset.p=t;b.textContent=tr(t);b.onclick=()=>{pill=t;[...$("pills").children].forEach(x=>x.classList.toggle("on",x.dataset.p===t));buildList()};$("pills").append(b)});$("searchPre").oninput=buildList;buildList()}
+ sortIdx().forEach(i=>{const p=PRESETS[i];if(!matchPill(p))return;const hay=(p[0]+" "+(p[10]||"")+" "+specTxt(p)+" "+FMTN[p[8]]+" "+(PNL[p[0]]?PNL[p[0]][0]:"")).toLowerCase();if(!q.every(t=>hay.includes(t)))return;n++;
+  const r=document.createElement("div");r.className="ri";r.setAttribute("role","button");r.tabIndex=0;r.innerHTML=`${fi(true,p[8])}<div class="t"><b>${p[0]}${p[9]?" ≈":""}${pnT(p[0])}</b><small>${p[10]||""} · ${specTxt(p).split(" + ").map(x=>x.replace(/ /g,"\u00a0")).join(" + ")}</small></div><span class="ad" title="Añadir a la comparación" aria-label="Añadir a la comparación" role="button" tabindex="0"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>`;
+  r.onclick=e=>{const ab=r.querySelector(".ad");if(ab){ab.classList.add("done");setTimeout(()=>ab.classList.remove("done"),700)}addScr(p);render();if(matchMedia("(max-width:900px)").matches)$("stage").scrollIntoView({behavior:"smooth",block:"center"})};L.append(r)});
+ if(!n)L.innerHTML='<div class="hint" style="padding:10px">Sin resultados</div>'}
+function initSearch(){const P=$("pills");FGR.forEach(([k,lab,vals])=>{const g=document.createElement("div");g.className="pg";g.dataset.k=k;const l=document.createElement("span");l.className="pg-l";l.textContent=lab;g.append(l);const w=document.createElement("div");w.className="pgp";vals.forEach(v=>{const b=document.createElement("button");b.type="button";b.className="pill";b.dataset.p=v;b.dataset.g=k;b.textContent=tr(v);b.onclick=()=>{SEL[k].has(v)?SEL[k].delete(v):SEL[k].add(v);b.classList.toggle("on",SEL[k].has(v));clr.hidden=!FGR.some(([q])=>SEL[q].size);buildList()};w.append(b)});g.append(w);P.append(g)});
+ const clr=document.createElement("button");clr.type="button";clr.className="pclr";clr.hidden=true;clr.textContent="Quitar filtros";clr.onclick=()=>{Object.values(SEL).forEach(x=>x.clear());P.querySelectorAll(".pill.on").forEach(x=>x.classList.remove("on"));clr.hidden=true;buildList()};P.append(clr);$("searchPre").oninput=buildList;buildList()}
 $("backPre").onclick=()=>{editId=0;$("add").textContent="[+] Añadir a la comparación";$("mPre").click()};
 $("mPre").onclick=()=>{$("mPre").className="on";$("mMan").className="";$("paPre").style.display="";$("paMan").style.display="none"};
 $("mMan").onclick=()=>{$("mMan").className="on";$("mPre").className="";$("paMan").style.display="";$("paPre").style.display="none"};
@@ -396,6 +646,7 @@ stg.addEventListener("pointermove",e=>{if(!DRG)return;const k=LAY.k,s0=DRG.s;if(
  let dx=DRG.dx0+(e.clientX-DRG.x0)/k,dy=DRG.dy0+(e.clientY-DRG.y0)/k;const me=LAY.PS.find(t=>t.d.s.id===DRG.id),oth=LAY.PS.filter(t=>t!==me).map(t=>lnz(t,t.L,t.T));
  if(!e.altKey&&oth.length){const thr=9/k,mine=lnz(me,DRG.bL+dx,DRG.bT+dy),best=key=>{let b=null,bs=1e9;mine[key].forEach((v,i)=>oth.forEach(o=>o[key].forEach((w,j)=>{const d=w-v,sc=Math.abs(d)*wgt(i,j);if(Math.abs(d)<=thr&&sc<bs){bs=sc;b=d}})));return b};const sx=best("x"),sy=best("y");if(sx!=null)dx+=sx;if(sy!=null)dy+=sy}
  s0.sx=dx;s0.sy=dy;const el=document.querySelector(`#stage [data-id="${s0.id}"]`);if(el)el.parentElement.style.transform=`translate(${(dx-(stk?me.d.m.ax:0))*k}px,${(dy-(stk?me.d.m.ay:0))*k}px)`;
+ {const nd=Math.max(...LAY.PS.map(t=>((t===me?DRG.bT+dy:t.T)+t.d.m.hh)*k))+70,cur=parseFloat(stg.style.minHeight)||0;if(nd>cur)stg.style.minHeight=Math.ceil(nd)+"px"}
  stg.querySelectorAll(".gd").forEach(x=>x.remove());const mine=lnz(me,DRG.bL+dx,DRG.bT+dy),eps=.6/k;
  const xs=[...oth.flatMap(t=>t.y),...mine.y],y0=Math.min(...xs),y1=Math.max(...xs),xa=[...oth.flatMap(t=>t.x),...mine.x],x0=Math.min(...xa),x1=Math.max(...xa);
  const gl=(a,b,w,h)=>{const g=document.createElement("div");g.className="gd";g.style.cssText=`left:${a}px;top:${b}px;width:${w}px;height:${h}px`;stg.append(g)};
@@ -405,9 +656,10 @@ const dgEnd=()=>{if(!DRG)return;const mv=DRG.moved,sm=DRG.sm;DRG=null;stg.classL
 stg.addEventListener("pointerup",dgEnd);stg.addEventListener("pointercancel",dgEnd);
 stg.addEventListener("dblclick",e=>{const pk=pickC(e);if(!pk)return;pk.q.d.s.sx=pk.q.d.s.sy=0;render()});
 stg.addEventListener("keydown",e=>{if(!/^Arrow/.test(e.key))return;const s0=screens.find(q=>q.id===hl);if(!s0)return;const st=(e.shiftKey?.5:.1)/2.54;s0.sx=(s0.sx||0)+(e.key==="ArrowRight"?st:e.key==="ArrowLeft"?-st:0);s0.sy=(s0.sy||0)+(e.key==="ArrowDown"?st:e.key==="ArrowUp"?-st:0);e.preventDefault();render()});
-$("bStack").onclick=()=>{if(screens.length<2)return;stk=!stk;screens.forEach(z=>{z.sx=z.sy=0});$("outl").checked=stk;render()};
+$("bCol").onclick=()=>{if(screens.length<2||stk)return;colM=!colM;screens.forEach(z=>{z.sx=z.sy=0});render()};
+$("bStack").onclick=()=>{if(screens.length<2)return;stk=!stk;if(stk)colM=false;screens.forEach(z=>{z.sx=z.sy=0});$("outl").checked=stk;render()};
 $("outl").onchange=render;
-$("vCmp").onclick=()=>{galMode=false;render()};$("vRat").onclick=()=>{galMode=true;render()};
+$("vCmp").onclick=()=>{galMode=false;render()};$("vRat").onclick=()=>{galMode=true;galSort="r";render()};
 window.onresize=render;
 if(matchMedia("(pointer:coarse)").matches&&innerWidth<=900)$("ppc").value=63;
 document.querySelectorAll("aside h2").forEach((h,i)=>{h.onclick=()=>{if(matchMedia("(max-width:900px)").matches)h.parentNode.classList.toggle("col")}});
@@ -495,7 +747,7 @@ function sceneSvg(mode,w,h,alt,lab,id){
  const fx=CW-9;P(fx,GY-18,1,18,"#e6e6f4");P(fx-1,GY-19,3,1,"#ffd23f");for(let j=0;j<6;j++)P(fx+1,GY-17+j,6-j,1,"#ff4d6d");
  /* etiqueta con tipografía legible */
  {const t=(l2?l1.trim()+" · "+l2:l1.trim()),sz=Math.min(4.2*cs,CW*cs*.05),tw=t.length*sz*.6+3*cs,ph=sz*1.75,px=(w-tw)/2,py=h-ph-2*cs;
-  e.push(`<rect x="${f2(px)}" y="${f2(py)}" width="${f2(tw)}" height="${f2(ph)}" rx="${f2(cs)}" fill="${LT?"#2a3140":"#0b0720"}" fill-opacity=".82"/>`,`<rect x="${f2(px)}" y="${f2(py)}" width="${f2(tw)}" height="${f2(cs*.8)}" fill="#ff4d8d"/>`,`<text x="${f2(w/2)}" y="${f2(py+ph*.68)}" font-family="system-ui,'Segoe UI',Roboto,Arial,sans-serif" font-weight="700" font-size="${f2(sz)}" fill="#fff" text-anchor="middle">${t}</text>`)}
+  e.push(`<rect x="${f2(px)}" y="${f2(py)}" width="${f2(tw)}" height="${f2(ph)}" rx="${f2(cs)}" fill="${LT?"#3a3936":"#0b0720"}" fill-opacity=".82"/>`,`<rect x="${f2(px)}" y="${f2(py)}" width="${f2(tw)}" height="${f2(cs*.8)}" fill="#ff4d8d"/>`,`<text x="${f2(w/2)}" y="${f2(py+ph*.68)}" font-family="system-ui,'Segoe UI',Roboto,Arial,sans-serif" font-weight="700" font-size="${f2(sz)}" fill="#fff" text-anchor="middle">${t}</text>`)}
  /* marcas de esquina (límites reales de la pantalla) */
  [[0,0,1,1],[CW-3,0,-1,1],[0,RW-1,1,-1],[CW-3,RW-1,-1,-1]].forEach(([x,y,sx,sy],i)=>{const L=3,c="#ff2d95";const X=i%2?CW-L:0,Y=i<2?0:RW-1;P(X,Y,L,1,c);P(i%2?CW-1:0,i<2?0:RW-L,1,L,c)});
  return `<g shape-rendering="crispEdges">${e.join("")}</g>`}
@@ -547,18 +799,19 @@ function renderMain(){
  $("chips").innerHTML="";screens.forEach(s=>{const e=document.createElement("div");e.className="chip";e.innerHTML=`<i class="dot" style="background:${s.c}"></i><span title="Editar" role="button" tabindex="0">${s.name.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</span><b class="dup" title="Duplicar y editar" aria-label="Duplicar ${s.name.replace(/"/g,"")}" role="button" tabindex="0"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="3.5" width="7.5" height="7.5" rx="1"/><path d="M4 3.5V1.5a.5.5 0 0 1 .5-.5H10a1 1 0 0 1 1 1V7.5a.5.5 0 0 1-.5.5H8.5"/></svg></b><b title="Quitar" aria-label="Quitar ${s.name.replace(/"/g,"")}" role="button" tabindex="0">✕</b>`;e.children[1].onclick=()=>edit(s);e.querySelector(".dup").onclick=()=>{const c={...s,s2:s.s2?{...s.s2}:null,id:++cnt,name:s.name+" (copia)",c:COLORS[(cnt-1)%COLORS.length]};screens.push(c);render();edit(c)};e.lastChild.onclick=()=>{screens=screens.filter(q=>q!==s);if(editId===s.id)editId=0;render()};$("chips").append(e)});
  const sy=SYS[$("sys").value];$("layBox").style.display=(sy.dual&&screens.some(q=>!q.s2))?"":"none";$("dsMain").disabled=$("dsProp").disabled=!["L","HY","LV","HV"].includes($("dsLay").value);$("dualBox").style.display=(screens.some(q=>q.s2)||sy.dual)?"":"none";$("reset").style.display=screens.length?"":"none";
  const isM=matchMedia("(max-width:700px)").matches;$("mode").textContent=isM?"Modo móvil":innerWidth<=900?"Modo tablet":"Modo escritorio";
- $("tbl").parentNode.dataset.u=$("unit").value;syncPpc();const ppc=+$("ppc").value;const nmS=calDone?(calDia&&Math.abs(ppc-diaPpc(calDia))<.3?`Tu pantalla: ${fmtD(calDia)}" · ${resTxt().replace("Resolución detectada: ","")}`:`Escala ajustada a mano · ${ppc.toFixed(1)} px/cm`):"";$("ppcv").textContent=!calDone?"Sin calibrar: elige tu pantalla para ver el tamaño real.":$("real").checked?"✓ Escalado automático activo":"Escala real desactivada";$("ppcd").textContent=nmS;$("ppcd").style.display=nmS?"":"none";
- const st=$("stage");st.innerHTML="";st.style.minHeight="";st.classList.add("sd");const OL=$("outl").checked?1:0;let sdH=$("sdH");if(!sdH){sdH=document.createElement("div");sdH.id="sdH";sdH.style.margin="6px 2px 0";st.insertAdjacentElement("afterend",sdH)}sdH.innerHTML="";
- const GM=galMode&&screens.length>0;let gal=$("gal");if(!gal){gal=document.createElement("div");gal.id="gal";st.insertAdjacentElement("afterend",gal)}gal.innerHTML="";gal.hidden=!GM;st.style.display=GM?"none":"";sdH.style.display=GM?"none":"";$("bStack").style.display=$("outl").parentNode.style.display=GM?"none":"";$("vCmp").classList.toggle("on",!GM);$("vRat").classList.toggle("on",GM);
+ $("tbl").parentNode.dataset.u=$("unit").value;syncPpc();const ppc=+$("ppc").value;const nmS=calDone?(calDia&&Math.abs(ppc-diaPpc(calDia))<.3?`Tu pantalla: ${fmtD(calDia)}" · ${resTxt().replace("Resolución detectada: ","")}`:`Escala ajustada a mano · ${ppc.toFixed(1)} px/cm`):"";$("ppcv").textContent=!calDone?"Sin calibrar: elige tu pantalla para ver el tamaño real.":$("real").checked?"✓ Escalado automático activo":"Escala real desactivada";window.scrTxt=nmS;$("ppcd").textContent=nmS;$("ppcd").style.display=nmS?"":"none";
+ const st=$("stage"),prevH=st.offsetHeight;st.style.transition="none";st.innerHTML="";st.style.minHeight="";requestAnimationFrame(()=>{st.style.transition=""});st.classList.add("sd");const OL=$("outl").checked?1:0;let sdH=$("sdH");if(!sdH){sdH=document.createElement("div");sdH.id="sdH";sdH.style.margin="6px 2px 0";st.insertAdjacentElement("afterend",sdH)}sdH.innerHTML="";
+ const GM=galMode&&screens.length>0;$("sysBtn").parentNode.hidden=GM;let gal=$("gal");if(!gal){gal=document.createElement("div");gal.id="gal";st.insertAdjacentElement("afterend",gal)}gal.innerHTML="";gal.hidden=!GM;st.style.display=GM?"none":"";sdH.style.display=GM?"none":"";$("bStack").style.display=$("bCol").style.display=$("outl").parentNode.style.display=GM?"none":"";$("vCmp").classList.toggle("on",!GM);$("vRat").classList.toggle("on",GM);
  if(!screens.length)$("tinfo").innerHTML="";
  if(!screens.length){st.innerHTML='<div class="hint">Añade pantallas para compararlas →</div>';st.style.alignItems="center";$("tbl").innerHTML="";return}
- if(screens.length<2)stk=false;st.style.alignItems="center";st.style.alignContent="";var COLM=isM||($("real").checked&&!stk);st.style.flexDirection=COLM?"column":"row";st.style.flexWrap=COLM?"nowrap":"";
- const D=screens.map(s=>({s,m:calc(s)})).sort((a,b)=>SKY(b)-SKY(a)),cw=Math.max(st.clientWidth-110,200);if(!screens.some(q=>q.id===hl))hl=D[0].s.id;let k;const an=m=>m.sb?[m.wi/2,m.hh/2]:[m.ax,m.ay],UP=Math.max(...D.map(d=>an(d.m)[1])),TOT=UP+Math.max(...D.map(d=>d.m.hh-an(d.m)[1]));
+ if(screens.length<2){stk=false;colM=false}st.style.alignItems="center";st.style.alignContent="";var RW=$("real").checked&&!stk&&!isM&&!colM,COLM=isM||colM;st.style.flexDirection=COLM?"column":"row";st.style.flexWrap=COLM?"nowrap":RW?"wrap":"";st.style.rowGap=RW?"28px":"";st.style.columnGap=RW?($("showBody").checked?"36px":"16px"):"";{const so=RW&&!$("showBody").checked;st.style.paddingRight=so?"20px":"";st.style.paddingLeft=so?"20px":""}
+ const HM=Math.max(360,Math.min(660,innerHeight-300)),D=screens.map(s=>({s,m:calc(s)})).sort((a,b)=>SKY(b)-SKY(a)),cw=Math.max(st.clientWidth-(isM?110:190),200);if(!screens.some(q=>q.id===hl))hl=D[0].s.id;let k;const an=m=>m.sb?[m.wi/2,m.hh/2]:[m.ax,m.ay],UP=Math.max(...D.map(d=>an(d.m)[1])),TOT=UP+Math.max(...D.map(d=>d.m.hh-an(d.m)[1]));
  const SXL=Math.max(...D.map(d=>d.m.ax)),SXR=Math.max(...D.map(d=>d.m.wi-d.m.ax)),SYU=Math.max(...D.map(d=>d.m.ay)),SYD=Math.max(...D.map(d=>d.m.hh-d.m.ay));
  if($("real").checked)k=ppc*2.54;
- else if(stk)k=Math.min(Math.max(st.clientWidth-60,200)/(SXL+SXR),400/(SYU+SYD));
- else if(isM){k=Math.min(cw/Math.max(...D.map(d=>d.m.ew)),260/Math.max(...D.map(d=>d.m.eh)))}
- else{const sw=D.reduce((a,d)=>a+d.m.wi,0);k=Math.min((cw-104*D.length)/sw,360/TOT)}
+ else if(stk)k=Math.min(Math.max(st.clientWidth-150,200)/(SXL+SXR),(HM+40)/(SYU+SYD));
+ else if(isM||colM){k=Math.min(cw/Math.max(...D.map(d=>d.m.ew)),(isM?260:300)/Math.max(...D.map(d=>d.m.eh)))}
+ else{const sw=D.reduce((a,d)=>a+d.m.wi,0);k=Math.min((cw-104*D.length)/sw,HM/TOT)}
+ const WRP=RW;
  const imgFor=(P,sc)=>{const im=$("imgMode").value;return im==="up"&&upImg&&P.img[0]==="M"?upImg:im==="scn"?svgImg(im,P.img):pattern(P.img,sc)};
  const mkPane=(d,ov,i)=>{const{s,m}=d,P=m.p[i],hv=ov&&s.id===hl,e=document.createElement("div");e.className="scr"+(ov?" ovs"+(hv?" hv":""):"");e.style.cssText=`width:${P.w*k}px;height:${P.h*k}px;--c:${s.c}`;
   const c=document.createElement("div");c.className="ct";
@@ -566,27 +819,59 @@ function renderMain(){
   e.append(c);
   return e};
  let NODM=false;
- const ctrl=(s,m,ov)=>{const hv=!ov||s.id===hl,kc=k/2.54,W=m.bi*k,H=m.hi*k,P0=m.p[0],x0=P0.x*k,y0=P0.y*k,sw=P0.w*k,sh=P0.h*k,fm=s.fmt,ds=m.dual,v=fm==="v"||fm==="rot";
+ const ctrl=(s,m,ov)=>{const hv=!ov||s.id===hl,kc=k/2.54,W=m.bi*k,H=m.hi*k,P0=m.p[0],x0=P0.x*k,y0=P0.y*k,sw=P0.w*k,sh=P0.h*k,fm=s.fmt,ds=m.dual,v=fm==="v"||fm==="rot",cl=fm==="v"&&CLAMS.includes(s.name),lay=LAYS[s.name]||"",fs=FS[s.name]||null;
   const R=(x,y,w,h,r)=>`<rect class="cx" x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}"/>`,C=(x,y,r)=>`<circle class="cx" cx="${x}" cy="${y}" r="${r}"/>`;
-  const dp=(x,y,u)=>R(x-1.5*u,y-u/2,3*u,u,u*.3)+R(x-u/2,y-1.5*u,u,3*u,u*.3);
-  const ab=(x,y,r)=>[["X",0,-1],["B",0,1],["Y",-1,0],["A",1,0]].map(q=>C(x+q[1]*r*1.9,y+q[2]*r*1.9,r)+`<text class="lt" x="${x+q[1]*r*1.9}" y="${y+q[2]*r*1.9+r*.35}" font-size="${r*.9}">${q[0]}</text>`).join("");
-  const sk=(x,y,r)=>C(x,y,r)+C(x,y,r*.55);
+  const G=t=>`<g class="cg">${t}</g>`;
+  const dp=(x,y,u)=>G(R(x-1.5*u,y-u/2,3*u,u,u*.3)+R(x-u/2,y-1.5*u,u,3*u,u*.3));
+  const ab=(x,y,r)=>G([["X",0,-1],["B",0,1],["Y",-1,0],["A",1,0]].map(q=>C(x+q[1]*r*1.9,y+q[2]*r*1.9,r)).join(""));
+  const sk=(x,y,r)=>G(C(x,y,r)+C(x,y,r*.55));
+  const fc=(x,y,r,n)=>n===2?G(C(x-1.4*r,y+.5*r,r)+C(x+1.4*r,y-.5*r,r)):ab(x,y,r);
+  const bt=(x,y,r)=>G(C(x,y,r)),tp=(x,y,t)=>G(R(x-t/2,y-t/2,t,t,t*.2));
   let o=`<rect class="chs${ov?" ov":""}${hv?"":" dim"}" x="1" y="1" width="${W-2}" height="${H-2}" rx="${Math.min(W,H)*(v?.09:.14)}" stroke="${s.c}"/>`;
   const sv=t=>`<svg width="${W}" height="${H}" style="position:absolute;left:0;top:0;pointer-events:none;overflow:visible">${t}</svg>`;if(!hv)return sv(o);
   if(fm==="rot"){const r=Math.max(4,Math.min(Math.hypot(sw,sh)/2+.3*kc,W/2-4));o+=`<circle class="cx rg" cx="${x0+sw/2}" cy="${y0+sh/2}" r="${r}"/>`}
   if(fm==="sld")o+=`<path class="cx rl" d="M${W*.05} ${H*.14}H${W*.95}M${W*.05} ${H*.86}H${W*.95}M${x0+sw+.35*kc} ${H*.08}V${H*.92}"/>`;
   const bz=q=>`<rect class="cx bz" x="${q.x*k-.25*kc}" y="${q.y*k-.25*kc}" width="${q.w*k+.5*kc}" height="${q.h*k+.5*kc}" rx="4"/>`;
   o+=bz(P0);if(ds)o+=bz(m.p[1]);
-  if(ds){const hy=H/2,p2=m.p[1],L=p2.x*k,Rg=W-(p2.x+p2.w)*k,cy=(p2.y+p2.h/2)*k,u=Math.min(.8*kc,L/3.6),r=Math.min(.5*kc,Rg/6),sr=Math.min(.8*kc,L/2.6),sr2=Math.min(.8*kc,Rg/2.6);
-   o+=`<rect class="cx hg" x="${W*.03}" y="${hy-.2*kc}" width="${W*.94}" height="${.4*kc}" rx="${.2*kc}"/>`+C(W*.1,hy,.3*kc)+C(W*.9,hy,.3*kc)+`<path class="cx rl" d="M${W*.2} ${hy}H${W*.8}"/>`;
-   if(L>2.4*kc)o+=sk(L/2,cy-1.3*kc,sr)+dp(L/2,cy+1.3*kc,u);else if(L>0)o+=dp(L/2,cy,u);
-   if(Rg>2.4*kc)o+=ab(W-Rg/2,cy-1.1*kc,r)+sk(W-Rg/2,cy+1.6*kc,sr2);else if(Rg>0)o+=ab(W-Rg/2,cy,r)}
-  else if(!v){const L=x0,Rg=W-x0-sw,big=Math.min(L,Rg)>3.8*kc&&H>6.5*kc,u=Math.min(.8*kc,L/3.6),r=Math.min(.5*kc,Rg/6),sr=Math.min(.8*kc,L/2.6);
-   if(L>0)o+=big?sk(L/2,H*.33,sr)+dp(L/2,H*.7,u):dp(L/2,H/2,u);
-   if(Rg>0)o+=big?ab(W-Rg/2,H*.33,r)+sk(W-Rg/2,H*.7,sr):ab(W-Rg/2,H/2,r)}
-  else{const ay=y0+sh,fh=H-ay,u=Math.min(.8*kc,fh*.2,W*.08),r=Math.min(.55*kc,W*.06);
-   if(fh>0)o+=dp(W*.26,ay+fh*.45,u)+C(W*.68,ay+fh*.52,r)+C(W*.82,ay+fh*.38,r)}
-  if(!ds){const fb=H-(y0+sh);if(fb>.9*kc){const py=y0+sh+fb*.82,ph=.22*kc;o+=R(W/2-1.5*kc,py,1.2*kc,ph,ph/2)+R(W/2+.3*kc,py,1.2*kc,ph,ph/2)}}
+  {const bzm=.3*kc,pad=.3*kc,MN=1.5*kc,mnf=Math.min,CU=.62*kc,CR=.42*kc,CS=.7*kc;
+   const hing=hy=>`<rect class="cx hg" x="${W*.03}" y="${hy-.2*kc}" width="${W*.94}" height="${.4*kc}" rx="${.2*kc}"/>`+C(W*.1,hy,.3*kc)+C(W*.9,hy,.3*kc)+`<path class="cx rl" d="M${W*.2} ${hy}H${W*.8}"/>`;
+   if(ds){const hy=H/2,p2=m.p[1],l0=pad,l1=p2.x*k-bzm-pad,r0=(p2.x+p2.w)*k+bzm+pad,r1=W-pad,lw=l1-l0,rw=r1-r0,cy=(p2.y+p2.h/2)*k,top=hy+.2*kc+pad,bot=H-pad;
+    o+=hing(hy);
+    let d=mnf(1.3*kc,(bot-cy)/2.3,(cy-top)/2.4);if(d<.3*kc)d=.3*kc;
+    const lc=(l0+l1)/2,rc=(r0+r1)/2,fr=w=>mnf(CR,w/6,d*.5),dpu=w=>mnf(CU,w/3.2,d*.8),stk=w=>mnf(CS,w/2.2,d*.7);
+    const ve=mnf(cy-top,bot-cy),okL=lw>=1.2*kc&&ve>=.45*kc,okR=rw>=1.2*kc&&ve>=.45*kc,su=w=>mnf(CU,w/3.2,ve/1.6),sf=w=>mnf(CR,w/6,ve/3);
+    if(lay==="nds"){if(okL)o+=dp(lc,cy,su(lw));if(okR)o+=ab(rc,cy,sf(rw))}
+    else{
+     if(okL){if(lw>=MN&&d>=.7*kc)o+=lay==="duo"?dp(lc,cy-d,dpu(lw))+sk(lc,cy+d,stk(lw)):sk(lc,cy-d,stk(lw))+dp(lc,cy+d,dpu(lw));else o+=dp(lc,cy,su(lw))}
+     if(okR){if(lay==="n3ds"){o+=sk(rc,cy-1.75*d,mnf(.32*kc,d*.3))+ab(rc,cy+.25*d,fr(rw));if(rw>=MN&&d>=.7*kc)o+=bt(rc,cy+1.9*d,mnf(.3*kc,d*.3))}
+      else if(rw>=MN&&d>=.7*kc)o+=ab(rc,cy-.85*d,fr(rw))+sk(rc,cy+1.2*d,mnf(CS,rw/2.2,d*.55));
+      else o+=ab(rc,cy,sf(rw))}}}
+   else if(!v){const l0=pad,l1=x0-bzm-pad,r0=x0+sw+bzm+pad,r1=W-pad,lw=l1-l0,rw=r1-r0,lc=(l0+l1)/2,rc=(r0+r1)/2,vy0=H*.1,vy1=H*.9,hh=vy1-vy0,okL=lw>=1.2*kc,okR=rw>=1.2*kc;
+    let lay2=lay;if(fs){if(fs[1]===0)lay2="cls";else if(fs[1]===2&&lay2!=="sw"&&lay2!=="vita")lay2="vita"}const nf=fs?fs[0]:4;
+    const u0=w=>mnf(CU,w/3.2,hh/3.4),r0f=w=>mnf(CR,w/6,hh/6.4),s0=w=>mnf(CS,w/2.2,hh/2.4);
+    const cls=()=>{if(okL)o+=dp(lc,H/2,u0(lw));if(okR)o+=fc(rc,H/2,r0f(rw),nf)};
+    const two=(a,b,w,c)=>{/* helper no-op */};
+    const big=Math.min(lw,rw)>=2.4*kc&&hh>=4.4*kc;
+    const dk=lay2==="sw"&&(s.name==="Steam Deck LCD"||s.name==="Steam Deck OLED")&&Math.min(lw,rw)>=5*kc;
+    if(lay2==="cls"||!okL||!okR)cls();
+    else if(lay2==="one"&&hh>=3*kc&&lw>=1.5*kc){const u=mnf(CU,lw/3.2,hh*.17),sr=mnf(CS*.85,lw/2.2,hh*.16);o+=dp(lc,H*.36,u)+sk(lc,H*.72,sr)+fc(rc,H/2,r0f(rw),nf)}
+    else if(lay2==="vita"&&big){const wl=mnf(lw,rw),u=mnf(CU,wl/3.2,hh*.17),sr=mnf(CS,wl/2.2,hh*.2),r=mnf(CR,wl/6,hh*.1),dx=.6*(wl-Math.max(3*u,2*sr))/2,ya=H*.3,yb=H*.72;
+     o+=dp(lc-dx,ya,u)+sk(lc+dx,yb,sr)+fc(rc+dx,ya,r,nf)+sk(rc-dx,yb,sr)}
+    else if(dk){const u=mnf(CU,lw*.15,hh*.14),sr=mnf(CS,lw*.16,hh*.17),r=mnf(CR,rw*.08,hh*.1),t=mnf(2.6*kc,lw*.34,hh*.3);
+     const lo=l0+lw*.3,li=l0+lw*.76,ro=r1-rw*.3,ri=r1-rw*.76;
+     o+=sk(lo,H*.27,sr)+dp(lo,H*.63,u)+tp(li,H*.7,t)+fc(ro,H*.27,r,nf)+sk(ro,H*.65,sr)+tp(ri,H*.7,t)}
+    else if(big){const wl=mnf(lw,rw),u=mnf(CU,wl/3.2,hh*.14),sr=mnf(CS,wl/2.2,hh*.17),r=mnf(CR,wl/6,hh*.1);
+     o+=sk(lc,H*.33,sr)+dp(lc,H*.7,u)+fc(rc,H*.33,r,nf)+sk(rc,H*.7,sr)}
+    else cls()}
+   else{const ay=(cl?Math.max(y0+sh,H/2+.2*kc):y0+sh)+bzm+pad,fh=H-pad-ay,u=mnf(CU,fh*.17,W*.09),r=mnf(CR,W*.06,fh*.1),sr=mnf(CS,W*.08,fh*.12);
+    const nf=fs?fs[0]:2,two=fs?fs[1]===2:lay==="gb2",r4=mnf(CR,W*.065,two?fh*.065:fh*.11);
+    if(fh>1.2*kc){const yy=two?.27:.45;
+     o+=dp(W*.26,ay+fh*yy,u);
+     if(nf===4)o+=ab(W*.74,ay+fh*yy,r4);else o+=G(C(W*.68,ay+fh*(two?.33:.52),r)+C(W*.82,ay+fh*(two?.2:.38),r));
+     if(two)o+=sk(W*.3,ay+fh*.74,sr)+(lay==="dmg"?tp(W*.7,ay+fh*.74,sr*1.7):lay==="one"?"":sk(W*.7,ay+fh*.74,sr))}}
+   if(cl)o+=hing(H/2);
+   if(!ds){const fb=H-(y0+sh);if(fb>.9*kc&&v){const py=y0+sh+fb*.9,ph=.22*kc;if(py+ph<H-pad)o+=G(R(W/2-1.5*kc,py,1.2*kc,ph,ph/2)+R(W/2+.3*kc,py,1.2*kc,ph,ph/2))}
+    else if(fb>.9*kc&&!v){const py=y0+sh+bzm+(fb-bzm)*.55,ph=.22*kc;if(py+ph<H-pad)o+=G(R(W/2-1.5*kc,py,1.2*kc,ph,ph/2)+R(W/2+.3*kc,py,1.2*kc,ph,ph/2))}}}
   return `<svg width="${W}" height="${H}" style="position:absolute;left:0;top:0;pointer-events:none;overflow:visible">${o}${ov||NODM?"":dm(s,W,H)}</svg>`};
  const mk=(d,ov)=>{const{s,m}=d;
   if(!m.dual){const e=mkPane(d,ov,0);if(!m.sb)return e;const b=document.createElement("div");b.className="body";b.style.cssText=`width:${m.bi*k}px;height:${m.hi*k}px`;
@@ -595,28 +880,28 @@ function renderMain(){
   if(m.sb)b.innerHTML=ctrl(s,m,ov);
   m.p.forEach((P,i)=>{const e=mkPane(d,ov,i);e.style.left=(P.x*k)+"px";e.style.top=(P.y*k)+"px";e.style.transform="none";b.append(e)});return b};
  if(stk)st.style.minHeight=Math.max(300,(SYU+SYD)*k+90)+"px";
- {D.forEach(d=>{const b=document.createElement("div");b.style.cssText="display:flex;flex-direction:column;align-items:center"+(stk?`;position:absolute;left:50%;top:50%;transform:translate(${((d.s.sx||0)-d.m.ax)*k}px,${((d.s.sy||0)-d.m.ay)*k}px)`:(COLM?"":`;margin-top:${(UP-an(d.m)[1])*k}px`)+((d.s.sx||d.s.sy)?`;transform:translate(${(d.s.sx||0)*k}px,${(d.s.sy||0)*k}px)`:""));const l=document.createElement("div");l.className="lbl";l.style.cssText="min-height:34px;display:flex;align-items:flex-end;justify-content:center;";l.style.color=d.s.c;const u=$("unit").value,dg=x=>{const dc=(x*2.54).toFixed(1)+" cm",di=x+Q;return u==="cm"?dc:u==="in"?di:di+" ("+dc+")"};l.textContent=d.s.name+" · "+dg(d.s.d)+(d.m.dual?" + "+dg(d.s.s2.d):"");if(!(OL||stk))b.append(l);else b.style.zIndex=d.s.id===hl?10:1;const bd=mk(d,OL);bd.dataset.id=d.s.id;if(stk)bd.style.margin="0";b.append(bd);st.append(b)});if(!COLM){st.style.alignItems="flex-start";st.style.alignContent="center"}else st.style.alignItems="safe center"
+ {D.forEach(d=>{const b=document.createElement("div");b.style.cssText="display:flex;flex-direction:column;align-items:center"+(stk?`;position:absolute;left:50%;top:50%;transform:translate(${((d.s.sx||0)-d.m.ax)*k}px,${((d.s.sy||0)-d.m.ay)*k}px)`:((COLM||WRP)?"":`;margin-top:${(UP-an(d.m)[1])*k}px`)+((d.s.sx||d.s.sy)?`;transform:translate(${(d.s.sx||0)*k}px,${(d.s.sy||0)*k}px)`:""));const l=document.createElement("div");l.className="lbl";l.style.cssText="min-height:34px;display:flex;align-items:flex-end;justify-content:center;";l.style.color=d.s.c;const u=$("unit").value,dg=x=>{const dc=(x*2.54).toFixed(1)+" cm",di=x+Q;return u==="cm"?dc:u==="in"?di:di+" ("+dc+")"};l.textContent=d.s.name+" · "+dg(d.s.d)+(d.m.dual?" + "+dg(d.s.s2.d):"");if(!(OL||stk))b.append(l);else b.style.zIndex=d.s.id===hl?10:1;b._d=d;const bd=mk(d,OL);bd.dataset.id=d.s.id;if(stk)bd.style.margin="0";b.append(bd);st.append(b)});if(!COLM){st.style.alignItems="flex-start";st.style.alignContent="center";if(RW){const its=[...st.children].filter(c=>c._d),t0=its.length?its[0].getBoundingClientRect().top:0;if(its.every(c=>Math.abs(c.getBoundingClientRect().top-t0)<2))its.forEach(c=>{c.style.marginTop=((UP-an(c._d.m)[1])*k)+"px"});else st.style.alignContent="flex-start"}}else st.style.alignItems="safe center"
   {const sr=st.getBoundingClientRect();LAY={k,PS:D.map(d=>{const r=st.querySelector(`[data-id="${d.s.id}"]`).getBoundingClientRect();return{d,L:(r.left-sr.left+st.scrollLeft)/k,T:(r.top-sr.top+st.scrollTop)/k}})}}
   if(screens.some(z=>z.sx||z.sy)){const rb=document.createElement("button");rb.className="lgb rsb";rb.textContent="↺ Recolocar todo";rb.onclick=()=>{screens.forEach(z=>{z.sx=z.sy=0});render()};st.append(rb)}
-  const need=Math.max(...LAY.PS.map(q=>(q.T+q.d.m.hh)*k))+70;st.style.minHeight=Math.max(300,need,stk?(SYU+SYD)*k+90:0)+"px"}
-  {const lgu=$("unit").value,lgd=x=>lgu==="cm"?(x*2.54).toFixed(1)+" cm":lgu==="in"?x+Q:x+Q+" ("+(x*2.54).toFixed(1)+" cm)",lgn=x=>lgu==="in"?x.toFixed(2):(x*2.54).toFixed(1),lgs=P=>lgn(P.w)+"×"+lgn(P.h)+(lgu==="in"?Q:" cm");const lg=document.createElement("div");lg.style.cssText="display:flex;flex-wrap:wrap;gap:6px;justify-content:center";if(OL||stk)D.forEach(d=>{const b=document.createElement("button");b.className="lgb"+(d.s.id===hl?" on":"");b.style.setProperty("--c",d.s.c);b.title="Diagonal · tamaño real de la pantalla · área de juego";b.textContent=`${d.s.name} · ${lgd(d.s.d)}${d.m.dual?" + "+lgd(d.s.s2.d):""} · ${lgs(d.m.p[0])} · juego ${d.m.gds.filter(x=>x!=null).map(x=>lgu==="in"?x.toFixed(2)+Q:lgu==="cm"?(x*2.54).toFixed(1)+" cm":x.toFixed(2)+Q+" ("+(x*2.54).toFixed(1)+" cm)").join(" + ")}`;b.onclick=()=>{hl=d.s.id;render()};lg.append(b)});const ht=document.createElement("div");ht.className="hint";ht.style.cssText="width:100%;text-align:center";ht.textContent="Arrastra cualquier consola para moverla: se imanta a bordes y centros (Alt: sin imán) · doble clic: recolocar · flechas: ajuste fino"+(OL?" · línea continua: área de juego · discontinua: pantalla · punteada: chasis":"");lg.append(ht);sdH.append(lg);const bs=$("bStack");bs.disabled=screens.length<2;bs.textContent=stk?"Separar":"Apilar centradas"}
+  const need=Math.max(...LAY.PS.map(q=>(q.T+q.d.m.hh)*k))+70;const fin=Math.max(300,need,stk?(SYU+SYD)*k+90:0);st.style.minHeight=prevH+"px";void st.offsetHeight;st.style.transition="";st.style.minHeight=fin+"px"}
+  {const lgu=$("unit").value,lgd=x=>lgu==="cm"?(x*2.54).toFixed(1)+" cm":lgu==="in"?x+Q:x+Q+" ("+(x*2.54).toFixed(1)+" cm)",lgn=x=>lgu==="in"?x.toFixed(2):(x*2.54).toFixed(1),lgs=P=>lgn(P.w)+"×"+lgn(P.h)+(lgu==="in"?Q:" cm");const lg=document.createElement("div");lg.style.cssText="display:flex;flex-wrap:wrap;gap:6px;justify-content:center";if(OL||stk)D.forEach(d=>{const b=document.createElement("button");b.className="lgb"+(d.s.id===hl?" on":"");b.style.setProperty("--c",d.s.c);b.title="Diagonal · tamaño real de la pantalla · área de juego";b.textContent=`${d.s.name} · ${lgd(d.s.d)}${d.m.dual?" + "+lgd(d.s.s2.d):""} · ${lgs(d.m.p[0])} · juego ${d.m.gds.filter(x=>x!=null).map(x=>lgu==="in"?x.toFixed(2)+Q:lgu==="cm"?(x*2.54).toFixed(1)+" cm":x.toFixed(2)+Q+" ("+(x*2.54).toFixed(1)+" cm)").join(" + ")}`;b.onclick=()=>{hl=d.s.id;render()};lg.append(b)});const ht=document.createElement("div");ht.className="hint";ht.style.cssText="width:100%;text-align:center";ht.textContent="Arrastra cualquier consola para moverla: se imanta a bordes y centros (Alt: sin imán) · doble clic: recolocar · flechas: ajuste fino"+(OL?" · línea continua: área de juego · discontinua: pantalla · punteada: chasis":"");lg.append(ht);sdH.append(lg);const bc=$("bCol");bc.disabled=screens.length<2||stk;bc.classList.toggle("on",!!colM&&!stk);const bs=$("bStack");bs.disabled=screens.length<2;bs.querySelector("span").textContent=stk?"Separar":"Apilar";bs.title=stk?"Separar":"Apilar centradas"}
  if($("real").checked&&$("showRef").checked){const r=document.createElement("div");r.className="cardref";{const o=CAL[calObj];r.style.cssText=`width:${o[0]*ppc}px;height:${o[1]*ppc}px;border-radius:${o[2]*ppc}px`;r.textContent=o[3]}st.append(r)}
- const sbar=document.createElement("div");sbar.className="ruler";const rw=5/2.54*k;sbar.innerHTML=`<svg width="${rw+2}" height="14" style="overflow:visible"><path d="M1 12H${rw+1}${[0,1,2,3,4,5].map(i=>`M${1+i*rw/5} 12V${i%5?8:3}`).join("")}"/></svg><span>5 cm</span>`;st.append(sbar);
+ const sbar=document.createElement("div");sbar.className="ruler";const rw=5/2.54*k;sbar.innerHTML=`<svg width="${rw+2}" height="14" style="overflow:visible"><path d="M1 12H${rw+1}${[0,1,2,3,4,5].map(i=>`M${1+i*rw/5} 12V${i%5?8:3}`).join("")}"/></svg><span>5 cm</span>`;st.append(sbar);{const rl=$("real").checked&&!isM;st.classList.toggle("is-real",rl);const kr=document.querySelector(".k-real");if(kr)kr.classList.toggle("on",$("real").checked);if(!isM){const bd=document.createElement("div");bd.className="rbadge"+(rl?"":" off");const sm=(window.scrTxt||"").replace(/^Tu pantalla: /,"");bd.innerHTML='<button type="button" class="rb-m" title="Activar / desactivar tamaño real (1:1)"><b>1:1</b><span><em>Tamaño real</em>'+(sm?'<small></small>':'')+'</span></button><button type="button" class="rb-e" title="Cambiar pantalla o afinar" aria-label="Cambiar pantalla o afinar"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2.5l2.5 2.5L5.5 13 2 14l1-3.5z"/></svg></button>';if(sm)bd.querySelector("small").textContent=sm;bd.querySelector(".rb-m").onclick=()=>$("real").click();bd.querySelector(".rb-e").onclick=calOpen;st.append(bd)}}
  if(GM){NODM=true;const gs=screens.find(q=>q.id===galId)||screens.find(q=>q.id===hl)||screens[0];galId=gs.id;
   const ents=Object.keys(SYS).filter(q=>q!=="custom").map(key=>{const m=calc(gs,key),P0=m.p[0],sc=P0.sm==="str"?1/Math.max(P0.dist,1/P0.dist):P0.sm==="crop"?1-P0.loss:m.useC;return{key,sy:SYS[key],m,sc,r:SYS[key].w/SYS[key].h,dual:SYS[key].dual?1:0}});
-  ents.sort(galSort==="u"?(a,b)=>b.sc-a.sc||a.r-b.r:(a,b)=>a.dual-b.dual||a.r-b.r);
+  ents.sort((a,b)=>a.dual-b.dual||(Math.abs(b.sc-a.sc)>.0005?b.sc-a.sc:0)||(b.m.gd||0)-(a.m.gd||0)||b.r-a.r);
   const tb=document.createElement("div");tb.className="gtb";screens.forEach(q=>{const b=document.createElement("button");b.className="lgb"+(q.id===gs.id?" on":"");b.style.setProperty("--c",q.c);b.textContent=q.name;b.onclick=()=>{galId=q.id;hl=q.id;render()};tb.append(b)});
-  const so=document.createElement("div");so.className="seg";[["r","Orden: ratio"],["u","Orden: uso"]].forEach(a=>{const b=document.createElement("button");b.textContent=a[1];b.className=galSort===a[0]?"on":"";b.onclick=()=>{galSort=a[0];render()};so.append(b)});tb.append(so);gal.append(tb);
+  const so=document.createElement("div");so.className="seg";[["r","Orden: ratio"],["u","Orden: uso"]].forEach(a=>{const b=document.createElement("button");b.textContent=a[1];b.className=galSort===a[0]?"on":"";b.onclick=()=>{galSort=a[0];render()};so.append(b)});gal.append(tb);
   const gg=document.createElement("div");gg.className="gg";const m0=ents[0].m,real=$("real").checked,gw=gal.clientWidth||800,cols=isM?2:Math.max(1,Math.floor(gw/270));
   if(real){k=ppc*2.54;gg.style.gridTemplateColumns=`repeat(auto-fill,minmax(${Math.max(210,m0.wi*k+46)}px,1fr))`}
   else{k=Math.max(5,Math.min(((gw-12*(cols-1))/cols-46)/m0.wi,190/m0.hh));gg.style.gridTemplateColumns=`repeat(${cols},minmax(0,1fr))`}
   const pc2=v=>Math.round(v*100)+"%",dc=n=>n.toFixed(2).replace(".",DEC),mx=Math.max(...ents.map(e=>e.sc));
-  ents.forEach(e=>{const m=e.m,P0=m.p[0],card=document.createElement("div"),tt=e.sy.n.split(" · "),sm=P0.sm,full=e.sc>=.97;card.className="gcd"+(full?" best":"");card.style.setProperty("--c",gs.c);
+  ents.forEach(e=>{const m=e.m,P0=m.p[0],card=document.createElement("div"),tt=e.sy.n.split(" · "),sm=P0.sm,full=e.sc>=.97;card.className="gcd";card.style.setProperty("--c",gs.c);
    let r1,r2;if(sm==="str"){r1=["Deformación",Math.abs(P0.dist-1)<.01?"ninguna":"×"+dc(P0.dist)];r2=["Pantalla usada","100%"]}else if(sm==="crop"){r1=["Recorte",Math.abs(P0.loss)<.005?"ninguno":pc2(P0.loss)];r2=["Pantalla usada","100%"]}else{r1=["Pantalla usada",pc2(m.useC)];r2=["Bordes negros",1-m.useC<.005?"ninguno":pc2(1-m.useC)]}
-   const hd=document.createElement("div");hd.className="gh";hd.innerHTML=`<b>${tt[0]}</b><span>${tt.slice(1).join(" · ")}</span>${full?"<i>★</i>":""}`;
+   const hd=document.createElement("div");hd.className="gh";hd.innerHTML=`<b>${tt[0]}</b><span>${tt.slice(1).join(" · ")}</span>`;
    const pv=document.createElement("div");pv.className="gpv";pv.style.minHeight=(m0.hh*k+20)+"px";const el=mk({s:gs,m},0);el.style.margin="0";pv.append(el);
    const rw=(a,b)=>`<div class="gm"><span>${a}</span><b>${b}</b></div>`;
-   const ex=document.createElement("div");ex.style.cssText="display:flex;flex-direction:column;gap:4px";ex.innerHTML=`<div class="gbar"><i style="width:${Math.round(e.sc*100)}%"></i></div>`+rw(r1[0],r1[1])+rw(r2[0],r2[1])+rw("Escala entera",m.ints.map(t=>t.replace(/ → /," · ocupa ").replace("<1× (no cabe)","no cabe a 1×")).join(" + "))+rw("Juego en pantalla",m.gds.filter(x=>x!=null).map(x=>dc(x)+Q).join(" + "));
+   const ex=document.createElement("div");ex.className="gx";ex.innerHTML=rw(r1[0],r1[1])+rw(r2[0],r2[1])+rw("Escala entera",m.ints.map(t=>t.replace(/ → /," · ocupa ").replace("<1× (no cabe)","no cabe a 1×")).join(" + "))+rw("Juego en pantalla",m.gds.filter(x=>x!=null).map(x=>dc(x)+Q).join(" + "));
    card.append(hd,pv,ex);card.title="Aplicar este ratio y volver a Comparar";card.onclick=()=>{$("sys").value=e.key;galMode=false;render()};gg.append(card)});
   gal.append(gg);NODM=false}
  const f=(n,d=2)=>n.toFixed(d).replace(".",DEC);
@@ -628,30 +913,28 @@ function renderMain(){
  const chs=(a,b)=>{const u=$("unit").value,cm=f(a)+" × "+f(b)+" cm",inn=f(a/2.54)+" × "+f(b/2.54)+Q;return u==="cm"?cm:u==="in"?inn:cm+" / "+inn};
  const bo=(fn)=>{if(D.length<2)return null;const v=D.map(fn),b=Math.max(...v);return v.every(x=>Math.abs(x-b)<1e-6)?null:b},bGd=bo(d=>d.m.gd),bUs=bo(d=>d.m.useC),bSb=bo(d=>d.m.sbr==null?-1:d.m.sbr),bDi=bo(d=>d.s.d),bc=(v,b)=>b!=null&&Math.abs(v-b)<1e-6?' class="best"':"";
  const ex=m=>m.p.map(q=>!q.on?"":q.sm==="crop"?" · recorta "+f(q.loss*100,0)+"%":q.sm==="str"&&Math.abs(q.dist-1)>.01?" · deformado ×"+f(q.dist):"").join("");
- $("ordH").textContent="Ordenadas de mayor a menor tamaño del juego en pantalla"+(D.length>1?". ▲ = mejor valor entre las consolas.":".");LD=D;
+ $("ordH").textContent="Ordenadas de mayor a menor tamaño del juego en pantalla.";LD=D;
  {const U=$("unit").value,L=x=>U==="cm"?f(x*2.54)+" cm":U==="in"?f(x)+Q:f(x)+Q+" ("+f(x*2.54)+" cm)",mx=Math.max(...D.map(d=>d.m.gd)),isB=(v,b)=>b!=null&&Math.abs(v-b)<1e-6,esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;");
- const th=(m,s)=>{const bx=m.p.map(q=>[q.x,q.y,q.x+q.w,q.y+q.h]),x0=Math.min(...bx.map(b=>b[0])),y0=Math.min(...bx.map(b=>b[1])),W=Math.max(...bx.map(b=>b[2]))-x0,H=Math.max(...bx.map(b=>b[3]))-y0,k=Math.min(112/W,64/H),w=W*k+4,h=H*k+4;
+ const th=(m,s)=>{const bx=m.p.map(q=>[q.x,q.y,q.x+q.w,q.y+q.h]),x0=Math.min(...bx.map(b=>b[0])),y0=Math.min(...bx.map(b=>b[1])),W=Math.max(...bx.map(b=>b[2]))-x0,H=Math.max(...bx.map(b=>b[3]))-y0,k=Math.min(60/W,42/H),w=W*k+4,h=H*k+4;
   return `<svg class="cc-th" width="${f2(w)}" height="${f2(h)}" viewBox="0 0 ${f2(w)} ${f2(h)}" role="img" aria-label="Pantalla (negro) con la imagen del juego (color)">`+m.p.map(q=>{const X=2+(q.x-x0)*k,Y=2+(q.y-y0)*k;return `<rect x="${f2(X)}" y="${f2(Y)}" width="${f2(q.w*k)}" height="${f2(q.h*k)}" fill="${q.on?"#000":"none"}" stroke="${s.c}" stroke-width="1.5"${q.on?"":' stroke-dasharray="3 3"'}/>`+(q.on?`<rect x="${f2(X+(q.w-q.cw)*k/2)}" y="${f2(Y+(q.h-q.ch)*k/2)}" width="${f2(q.cw*k)}" height="${f2(q.ch*k)}" fill="${s.c}" fill-opacity=".88"/>`:"")}).join("")+"</svg>"};
  const row=(lab,pct,txt,best,tip)=>`<div class="mrow${best?" best":""}" title="${tip}"><span>${lab}</span><span class="mbar"><i style="width:${Math.max(0,Math.min(100,pct)).toFixed(1)}%"></i></span><span class="v">${txt}</span></div>`;
  $("tbl").innerHTML=D.map(({s,m},i)=>{const s2=m.dual?s.s2:null,gt=m.gds.map(x=>x==null?"—":f(x)+Q).join(" + "),gcm=U==="in"?"":m.gds.map(x=>x==null?"—":f(x*2.54)).join(" + ")+" cm de diagonal · ",big=gt.length>13,full=m.useC>=.999;
   const ints=m.ints.map(t=>t.replace(/ → /," · ocupa ").replace("<1× (no cabe)","no cabe a 1×")).join(" + ");
   const res=s.rw&&s.rh?" · "+s.rw+"×"+s.rh+(s2&&s2.rw?" + "+s2.rw+"×"+s2.rh:""):"";
-  return `<article class="cc" style="--c:${s.c}"><div class="cc-h">${rk(i)} ${fi(m.hb,s.fmt)}<span>${esc(s.name)}${s.ap?' <span title="Medidas de chasis aproximadas">≈</span>':""}</span>${isB(m.gd,bGd)?'<span class="tag" title="Mayor tamaño de juego en pantalla">Mayor</span>':""}<small>${s.d}${Q}${s2?" + "+s2.d+Q:""} · ${rt(s.aw,s.ah)}${s2?" + "+rt(s2.aw,s2.ah):""}</small></div>
-  <div class="cc-hero"><div class="cc-tw">${th(m,s)}</div><div class="cc-hv"><div class="cc-k">Juego en pantalla</div><div class="cc-big${big?" sm":""}">${gt}</div><span class="mbar" title="Frente a la mejor consola"><i style="width:${(m.gd/mx*100).toFixed(1)}%"></i></span><div class="cc-sub">${gcm}${full?"sin bordes negros":"bordes negros "+f((1-m.useC)*100,0)+"%"}${ex(m)}</div></div></div>
-  ${row("Pantalla usada",m.useC*100,f(m.useC*100,0)+"%",isB(m.useC,bUs),"Parte de la pantalla que ocupa la imagen")}
-  ${m.sbr!=null?row("Sobre el chasis",m.sbr,f(m.sbr,0)+"%",isB(m.sbr,bSb),"Superficie de pantalla frente a la del chasis"):""}
-  <div class="mrow" title="Mayor múltiplo exacto de la resolución original que cabe"><span>Escala entera</span><span class="sp"></span><span class="v">${ints}</span></div>
-  <div class="cc-spec">Pantalla <b>${m.p.map(q=>chs(q.w*2.54,q.h*2.54)).join(" + ")}</b>${res}<br>Chasis <b>${m.hb?chs(s.bw,s.bh)+(m.dual?" (abierta)":""):"sin datos"}</b></div></article>`}).join("")}
+  const dm=(w,h)=>U==="in"?f(w/2.54)+"×"+f(h/2.54):f(w)+"×"+f(h),un=U==="in"?"in":"cm",pe=PNL[s.name],mult=m.ints.map(t=>t.split(" → ")[0].replace("<1× (no cabe)","<1×")).join(" + "),st=(v,l,b,tip)=>`<div class="cc-st${b?" bst":""}" title="${tip}"><b>${v}</b><span>${l}</span></div>`;
+  return `<article class="cc" style="--c:${s.c}"><div class="cc-tw">${th(m,s)}</div><div class="cc-hv"><div class="cc-h">${rk(i)} ${fi(m.hb,s.fmt)}<span class="cc-n">${esc(s.name)}${s.ap?' <span title="Medidas de chasis aproximadas">≈</span>':""}</span></div><div class="cc-s0">${s.d}${Q}${s2?" + "+s2.d+Q:""} · ${rt(s.aw,s.ah)}${s2?" + "+rt(s2.aw,s2.ah):""}${pe?` · <span title="${pe[1]}">${pe[0]}</span>`:""}</div><div class="cc-big${big?" sm":""}">${gt}<small>juego</small></div><span class="mbar" title="Frente a la mejor consola"><i style="width:${(m.gd/mx*100).toFixed(1)}%"></i></span>
+  <div class="cc-sts">${st(f(m.useC*100,0)+"%","Usada",isB(m.useC,bUs),"Parte de la pantalla que ocupa la imagen")}${st(m.sbr!=null?f(m.sbr,0)+"%":"—","Chasis",m.sbr!=null&&isB(m.sbr,bSb),"Superficie de pantalla frente a la del chasis")}${st(mult,"Escala",false,"Mayor múltiplo exacto de la resolución original que cabe")}</div>
+  ${ex(m)?`<div class="cc-dm">${ex(m).replace(/^ · /,"")}</div>`:""}</div></article>`}).join("")}
 }
 ["AYN Odin 2 Portal","Retroid Pocket 5","Anbernic RG476H"].forEach(n=>addScr(PRESETS.find(q=>q[0]===n)));
 /* ---- compartir, exportar, accesibilidad ---- */
 const CTL=["sys","dualMode","dsLay","dsMain","dsProp","scMode","unit","cuW","cuH","cuNW","cuNH"];
 const b64=t=>btoa(unescape(encodeURIComponent(t))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
 const ub64=t=>decodeURIComponent(escape(atob(t.replace(/-/g,"+").replace(/_/g,"/"))));
-const encState=()=>{const o={s:screens.map(s=>({n:s.name,d:s.d,a:[s.aw,s.ah],r:[s.rw,s.rh],b:[s.bw,s.bh],f:s.fmt,s2:s.s2,ap:s.ap?1:0,...(s.sx||s.sy?{q:[+(s.sx||0).toFixed(4),+(s.sy||0).toFixed(4)]}:{})})),gm:galMode?1:0,gi:Math.max(0,screens.findIndex(q=>q.id===galId)),ol:$("outl").checked?1:0,stk:stk?1:0,sb:$("showBody").checked?1:0,t:document.body.dataset.theme==="nes"?"studio":document.body.dataset.theme};CTL.forEach(id=>o[id]=$(id).value);return b64(JSON.stringify(o))};
+const encState=()=>{const o={s:screens.map(s=>({n:s.name,d:s.d,a:[s.aw,s.ah],r:[s.rw,s.rh],b:[s.bw,s.bh],f:s.fmt,s2:s.s2,ap:s.ap?1:0,...(s.sx||s.sy?{q:[+(s.sx||0).toFixed(4),+(s.sy||0).toFixed(4)]}:{})})),gm:galMode?1:0,gi:Math.max(0,screens.findIndex(q=>q.id===galId)),ol:$("outl").checked?1:0,stk:stk?1:0,col:colM?1:0,sb:$("showBody").checked?1:0,t:document.body.dataset.theme==="nes"?"studio":document.body.dataset.theme};CTL.forEach(id=>o[id]=$(id).value);return b64(JSON.stringify(o))};
 const applyState=o=>{screens=[];cnt=0;hl=0;editId=0;(o.s||[]).forEach(q=>{const s={id:cnt+1,name:String(q.n||"Pantalla").slice(0,60),d:+q.d,aw:+q.a[0],ah:+q.a[1],rw:+q.r[0]||0,rh:+q.r[1]||0,bw:+q.b[0]||0,bh:+q.b[1]||0,fmt:["h","v","ds","rot","sld"].includes(q.f)?q.f:"h",s2:q.s2&&q.s2.d>0?{d:+q.s2.d,aw:+q.s2.aw,ah:+q.s2.ah,rw:+q.s2.rw||0,rh:+q.s2.rh||0}:null,ap:q.ap?1:0};if(Array.isArray(q.q)){s.sx=+q.q[0]||0;s.sy=+q.q[1]||0}if(!(s.d>0&&s.aw>0&&s.ah>0))return;cnt++;s.c=COLORS[(cnt-1)%COLORS.length];screens.push(s)});
  CTL.forEach(id=>{const e=$(id),v=o[id];if(v==null)return;if(e.tagName==="SELECT"&&![...e.options].some(x=>x.value===v))return;e.value=v});$("showBody").checked=o.sb!==0;if(o.t&&THS.includes(o.t))setTh(o.t);
- stk=o.stk===1&&screens.length>1;galMode=o.gm===1;galId=(screens[o.gi]||screens[0]||{}).id||0;$("outl").checked=o.ol===1||o.v==="ov"};
+ stk=o.stk===1&&screens.length>1;colM=o.col===1&&!stk&&screens.length>1;galMode=o.gm===1;galId=(screens[o.gi]||screens[0]||{}).id||0;$("outl").checked=o.ol===1||o.v==="ov"};
 const loadCode=t=>{try{const m=String(t).match(/s=([A-Za-z0-9_-]+)/),o=JSON.parse(ub64(m?m[1]:String(t).trim()));applyState(o);render();return true}catch(e){return false}};
 const toast=t=>{$("toast").textContent=t;clearTimeout(toast.h);toast.h=setTimeout(()=>$("toast").textContent="",5000)};
 const copyTxt=async t=>{try{await navigator.clipboard.writeText(t);return true}catch(e){$("shareIn").value=t;$("shareIn").select();try{return document.execCommand("copy")}catch(e2){return false}}};
@@ -659,6 +942,7 @@ const dl=async(data,name)=>{let d=null;try{d=await claude.use("downloads")}catch
  if(d){try{await d.save({filename:name,data});return "Archivo guardado."}catch(e){return e&&e.code==="declined"?"Descarga cancelada.":"No se pudo guardar el archivo."}}
  try{const u=URL.createObjectURL(data instanceof Blob?data:new Blob([data]));const a=document.createElement("a");a.href=u;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);return "Archivo descargado."}catch(e){return "No se pudo descargar el archivo."}};
 $("bLink").onclick=async()=>{const u=location.href.split("#")[0]+"#s="+encState();toast((await copyTxt(u))?"Enlace copiado. Si no abre la comparación, pégalo en «Cargar».":"Selecciona y copia el enlace del cuadro de abajo.")};
+$("bOpen").onclick=()=>{const r=$("loadRow"),o=r.hidden;r.hidden=!o;$("bOpen").setAttribute("aria-expanded",o);if(o)$("shareIn").focus()};
 $("bLoad").onclick=()=>toast($("shareIn").value.trim()?(loadCode($("shareIn").value)?"Comparación cargada.":"Enlace o código no válido."):"Pega primero un enlace o código.");
 $("bPng").onclick=async()=>{toast("Generando imagen…");try{if(!window.html2canvas)await new Promise((ok,ko)=>{const x=document.createElement("script");x.src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";x.onload=ok;x.onerror=ko;document.head.append(x)});const c=await html2canvas($("stage"),{backgroundColor:getComputedStyle($("stage")).backgroundColor,scale:2});const bl=await new Promise(r=>c.toBlob(r,"image/png"));toast(await dl(bl,"comparacion-pantallas.png"))}catch(e){toast("No se pudo generar la imagen en este entorno.")}};
 ["scMode","cuW","cuH","cuNW","cuNH"].forEach(id=>$(id).onchange=$(id).oninput=render);
@@ -678,7 +962,7 @@ const resTxt=()=>{const w=Math.round(screen.width*dpr()),h=Math.round(screen.hei
 const diaPpc=d=>Math.hypot(screen.width,screen.height)/(d*2.54);
 const diaShow=()=>{$("calRes").textContent=resTxt();document.querySelectorAll("#calDia button").forEach(b=>b.classList.toggle("on",+b.dataset.d===calDia));$("calDiaIn").value=DIAS.some(x=>x[0]===calDia)?"":(calDia||"")};
 const diaApply=d=>{if(!(d>=4&&d<=100))return;calDia=d;try{localStorage.setItem("calDia",d)}catch(e){}calSet(diaPpc(d));diaShow()};
-const diaLab=x=>(x[1]+(x[0]>=13&&x[0]<40?'"':"")).replace(/(\d)\.(\d)/,"$1"+DEC);
+const diaLab=x=>(x[1]+(x[0]>=13&&x[0]<40?'"':"")).replace(/(\d)\.(\d)/,"$1"+DEC+"$2");
 DIAS.forEach(x=>{const b=document.createElement("button");b.dataset.d=x[0];b.textContent=diaLab(x);b.onclick=()=>diaApply(x[0]);$("calDia").append(b)});
 $("calDiaIn").oninput=()=>diaApply(parseFloat($("calDiaIn").value.replace(",",".")));
 const calOpen=()=>{$("calRng").value=$("ppc").value;diaShow();if(!calDone&&calDia)calSet(diaPpc(calDia));$("calOv").hidden=false;document.body.style.overflow="hidden";calDraw();$("calRng").focus()};
@@ -686,7 +970,7 @@ const calClose=()=>{$("calOv").hidden=true;document.body.style.overflow="";if(!c
 $("calOpen").onclick=calOpen;
 $("calRng").oninput=calDraw;$("calMin").onclick=()=>calSet(+$("calRng").value-.1);$("calPlus").onclick=()=>calSet(+$("calRng").value+.1);
 document.querySelectorAll("#calSeg button").forEach(b=>b.onclick=()=>{calObj=b.dataset.o;calDraw()});
-$("calCancel").onclick=calClose;
+$("calCancel").onclick=$("calX").onclick=calClose;
 $("calOk").onclick=()=>{$("ppc").value=$("calRng").value;phys=+$("calRng").value*dpr();calDone=true;try{localStorage.setItem("ppcPhys",phys);localStorage.setItem("ppc",$("ppc").value);localStorage.setItem("ppcObj",calObj);if(calDia)localStorage.setItem("calDia",calDia)}catch(e){}$("calOv").hidden=true;document.body.style.overflow="";$("real").checked=true;render()};
 $("calStage").addEventListener("wheel",e=>{e.preventDefault();calSet(+$("calRng").value-Math.sign(e.deltaY)*.2)},{passive:false});
 document.addEventListener("keydown",e=>{if($("calOv").hidden)return;if(e.key==="Escape")calClose();else if(e.key==="Enter"&&!e.target.closest("button"))$("calOk").click();else if(e.target.id!=="calRng"&&(e.key==="ArrowRight"||e.key==="ArrowUp"))calSet(+$("calRng").value+.1);else if(e.target.id!=="calRng"&&(e.key==="ArrowLeft"||e.key==="ArrowDown"))calSet(+$("calRng").value-.1)});
@@ -699,7 +983,7 @@ const THS=["studio","light"];
 try{localStorage.removeItem("nes")}catch(e){}
 const setTh=t=>{if(!THS.includes(t))t="studio";document.body.dataset.theme=t;COLORS=PAL[t];screens.forEach((s,i)=>s.c=COLORS[i%COLORS.length]);document.querySelectorAll("#themes button").forEach(b=>b.classList.toggle("on",b.dataset.t===t));try{localStorage.setItem("th",t)}catch(e){}};
 document.querySelectorAll("#themes button").forEach(b=>b.onclick=()=>{setTh(b.dataset.t);render()});
-{let t0=null;try{t0=localStorage.getItem("th")}catch(e){}setTh(t0)}
+{let t0=null;try{t0=localStorage.getItem("th")}catch(e){}if(!t0)try{t0=matchMedia("(prefers-color-scheme: light)").matches?"light":"studio"}catch(e){}setTh(t0)}
 function buildVis(){
  const svg=(b,w=40,h=30)=>`<svg class="vi" viewBox="0 0 ${w} ${h}" aria-hidden="true">${b}</svg>`,R=(x,y,w,h,c="",r=2)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" class="${c}"/>`;
  const mkv=(id,items,cls)=>{const sel=$(id),box=document.createElement("div");box.className="vb "+cls;box.setAttribute("role","group");items.forEach(it=>{const b=document.createElement("button");b.type="button";b.dataset.v=it.v;b.className="vt";b.title=it.tip||it.label;b.innerHTML=(it.icon||"")+`<b>${it.label}</b>`+(it.sub?`<small>${it.sub}</small>`:"");b.onclick=()=>{if(sel.disabled)return;sel.value=it.v;sel.dispatchEvent(new Event("change",{bubbles:true}));syncVis()};box.append(b)});sel.style.display="none";sel.insertAdjacentElement("afterend",box);VIS.push([sel,box])};
@@ -751,6 +1035,24 @@ function buildVis(){
  mkv("arSel",ARS.map((a,i)=>({v:String(i),label:a[0]})).concat([{v:"o",label:"Otra"}]),"vs");
  syncVis()}
 buildVis();
+(function(){const bn=$("datBtn");let seen=false;try{seen=localStorage.getItem("datSeen")==="1"}catch(e){}
+ if(!seen)bn.classList.add("new");bn.addEventListener("click",()=>{bn.classList.remove("new");try{localStorage.setItem("datSeen","1")}catch(e){}});})();
+
+/* control bar wiring */
+(function(){const pairs=[["sysBtn","sysPop"],["imgBtn","imgPop"],["datBtn","datPop"],["viewBtn","viewPop"]].map(([b,p])=>[$(b),$(p)]);
+ const closeAll=()=>pairs.forEach(([b,p])=>{p.hidden=true;b.setAttribute("aria-expanded","false")});
+ pairs.forEach(([b,p])=>{b.onclick=e=>{e.stopPropagation();const o=p.hidden;closeAll();if(o){if(p.id==="datPop"&&innerWidth>900){const l=$("stageCard").getBoundingClientRect().left+12;p.style.width=Math.max(320,Math.min(1200,b.getBoundingClientRect().right-l))+"px"}p.style.left="";p.hidden=false;if(innerWidth>900&&p.id!=="datPop"){const r=p.getBoundingClientRect();if(r.right>innerWidth-12)p.style.left=(r.left-p.offsetParent.getBoundingClientRect().left-(r.right-innerWidth+12))+"px"}b.setAttribute("aria-expanded","true")}};p.querySelector(".x").onclick=()=>{closeAll();b.focus()}});
+ document.addEventListener("click",e=>{if(!pairs.some(([b,p])=>p.contains(e.target)||b.contains(e.target)))closeAll()});
+ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&pairs.some(([b,p])=>!p.hidden)){const o=pairs.find(([b,p])=>!p.hidden);closeAll();o[0].focus()}});
+ $("scMode").addEventListener("change",closeAll);["showBody","outl"].forEach(i=>$(i).addEventListener("change",closeAll));$("bStack").addEventListener("click",()=>setTimeout(closeAll,0));$("bCol").addEventListener("click",()=>setTimeout(closeAll,0));$("imgMode").addEventListener("change",()=>{if($("imgMode").value!=="up")closeAll()});
+ $("sys").addEventListener("change",()=>{const v=$("sys").value;if(v!=="custom"&&!(SYS[v]&&SYS[v].dual))closeAll()});
+ const card=$("stageCard"),fitW=()=>{const p=$("sysPop");if(p.hidden||!p.classList.contains("wide")||innerWidth<=900){p.style.width="";return}p.style.width=Math.max(560,Math.min(1000,card.getBoundingClientRect().right-12-$("sysBtn").getBoundingClientRect().left))+"px"},upd=()=>{fitW();const o=pairs.find(([b,p])=>!p.hidden);card.classList.toggle("dim",!!o);};
+ pairs.forEach(([b,p])=>new MutationObserver(upd).observe(p,{attributes:true,attributeFilter:["hidden","class"]}));
+ const pop=$("sysPop"),btn=$("sysBtn");
+ window.syncCtl=()=>{const v=$("sys").value,t=pop.querySelector('.vt[data-v="'+v+'"]');if(!t)return;const l=t.querySelector("b"),s=t.querySelector("small"),ic=t.querySelector("svg");$("sysTx").textContent=(l?l.textContent:v)+(s&&v!=="custom"?" · "+s.textContent:"");$("sysIc").innerHTML=ic?ic.outerHTML:"";btn.title=SYS[v]?SYS[v].n:"";$("bStack").classList.toggle("on",!!stk);pop.classList.toggle("wide",$("layBox").style.display!=="none"||$("dualBox").style.display!=="none");$("file").style.display=$("imgMode").value==="up"?"block":"none"};
+ const _sv=syncVis;syncVis=function(){_sv();syncCtl()};
+})();
+syncVis();
 $("showRef").onchange=render;
 (function welcomeInit(){
  const desk=matchMedia("(min-width:901px)").matches,W=$("welcome"),sugDia=()=>{const d=dpr(),w=screen.width,PW=w*d,PH=screen.height*d;if(d>=1.9)return w<=1470?13.3:w<=1560?14:w<=1800?16:27;if(PW>=3440&&PH<=1440)return 34;if(PW>=3840)return 32;if(PW<=1366)return 15.6;if(PW<=1920)return d>1.1?15.6:24;if(PW<=2560)return d>1.1?(PH>=1600?16:15.6):27;return 27};
@@ -789,3 +1091,5 @@ render();
  new MutationObserver(rs=>{if(LANG!=="en")return;for(const r of rs){if(r.type==="childList")r.addedNodes.forEach(tn);else if(r.type==="characterData")tn(r.target);else ta(r.target)}}).observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:AT});
  applyLang(false)}
 </script></body></html>
+
+</body></html>
